@@ -1,0 +1,250 @@
+#preferences-page {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+#preferences-page .back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0039A6;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#preferences-page .back .fas {
+  color: #0039A6;
+  margin-right: 5px;
+}
+#preferences-page h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#preferences-page .content {
+  display: flex;
+  align-items: flex-start;
+}
+#preferences-page .content .menu-prefs {
+  width: 360px;
+  padding: 20px;
+  list-style: none;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+}
+#preferences-page .content .menu-prefs li:not(.divider) {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#preferences-page .content .menu-prefs li:not(.divider) .fas {
+  width: 20px;
+  text-align: center;
+  color: #B5B5B5;
+  font-size: 17px;
+  margin-right: 10px;
+}
+#preferences-page .content .menu-prefs li:not(.divider) span {
+  font-size: 13px;
+}
+#preferences-page .content .menu-prefs li:not(.divider) img {
+  width: 20px;
+  margin-right: 10px;
+}
+#preferences-page .content .menu-prefs li:not(.divider):hover {
+  background-color: #F5F5F5;
+}
+#preferences-page .content .menu-prefs li:not(.divider).active {
+  background-color: #1A8EAD;
+}
+#preferences-page .content .menu-prefs li:not(.divider).active .fas, #preferences-page .content .menu-prefs li:not(.divider).active span {
+  color: white;
+}
+#preferences-page .content .menu-prefs .divider {
+  margin: 10px 0;
+  height: 1px;
+  display: block;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+#preferences-page .forms {
+  width: calc(100% - 360px);
+  margin-left: 50px;
+}
+#preferences-page .forms > *:not(.form1) {
+  display: none;
+}
+#preferences-page .forms .form1 h2, #preferences-page .forms .form3 h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#preferences-page .forms .form1 > div:not(:last-child), #preferences-page .forms .form3 > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+#preferences-page .forms .form1 .mr, #preferences-page .forms .form3 .mr {
+  margin-right: 10px;
+}
+#preferences-page .forms .form1 .row1, #preferences-page .forms .form3 .row1 {
+  display: flex;
+}
+#preferences-page .forms .form1 .row1 .ic-dropdown, #preferences-page .forms .form3 .row1 .ic-dropdown {
+  width: 30%;
+}
+#preferences-page .forms .form1 .row1 .ic-textfield, #preferences-page .forms .form3 .row1 .ic-textfield {
+  width: 70%;
+}
+#preferences-page .forms .form1 .row2, #preferences-page .forms .form1 .row4, #preferences-page .forms .form3 .row2, #preferences-page .forms .form3 .row4 {
+  display: flex;
+}
+#preferences-page .forms .form1 .row2 label:first-child, #preferences-page .forms .form1 .row4 label:first-child, #preferences-page .forms .form3 .row2 label:first-child, #preferences-page .forms .form3 .row4 label:first-child {
+  width: 60%;
+}
+#preferences-page .forms .form1 .row2 label:last-child, #preferences-page .forms .form1 .row4 label:last-child, #preferences-page .forms .form3 .row2 label:last-child, #preferences-page .forms .form3 .row4 label:last-child {
+  width: 40%;
+}
+#preferences-page .forms .form1 .row3, #preferences-page .forms .form3 .row3 {
+  display: flex;
+}
+#preferences-page .forms .form1 .row3 .ic-dropdown, #preferences-page .forms .form3 .row3 .ic-dropdown {
+  width: 50%;
+}
+#preferences-page .forms .form1 .row5, #preferences-page .forms .form3 .row5 {
+  display: flex;
+}
+#preferences-page .forms .form1 .row5 .ic-dropdown, #preferences-page .forms .form3 .row5 .ic-dropdown {
+  width: calc(100% / 3);
+}
+#preferences-page .forms .form1 .buttons, #preferences-page .forms .form3 .buttons {
+  margin-top: 20px;
+}
+#preferences-page .forms .form1 .buttons .ic-primary-button, #preferences-page .forms .form3 .buttons .ic-primary-button {
+  line-height: 50px;
+  margin-right: 10px;
+}
+#preferences-page .forms .form1 .buttons .ic-secondary-button, #preferences-page .forms .form3 .buttons .ic-secondary-button {
+  padding: 0 30px;
+}
+#preferences-page .forms .form2 h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#preferences-page .forms .form2 .tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+#preferences-page .forms .form2 .tabs span {
+  font-size: 13px;
+  color: #B5B5B5;
+  margin-right: 30px;
+  transition: 0.2s;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+#preferences-page .forms .form2 .tabs span.active {
+  color: #1A8EAD;
+  font-weight: 500;
+  box-shadow: inset 0px -2px 0px 0px #1A8EAD;
+}
+#preferences-page .forms .form2 .form-tabs .ic-textfield {
+  margin-bottom: 10px;
+}
+#preferences-page .forms .form2 .form-tabs [data-content=email] {
+  display: none;
+}
+#preferences-page .forms .form2 .form-tabs [data-content=email] p {
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+#preferences-page .forms .form2 .form-tabs [data-content=email] .ic-radio {
+  margin-bottom: 20px;
+}
+#preferences-page .forms .form2 .form-tabs [data-content=email] .unsubscribe {
+  -webkit-appearance: none;
+  color: #D82323;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+#preferences-page .forms .form2 .form-tabs [data-content=email] .unsubscribe .fas {
+  color: #D82323;
+  margin-right: 5px;
+}
+#preferences-page .forms .form4 h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#preferences-page .forms .form4 p {
+  font-size: 13px;
+}
+#preferences-page .forms .form4 .ic-textfield {
+  margin-top: 15px;
+  max-width: 300px;
+}
+#preferences-page .form5 h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#preferences-page .form5 .job-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#preferences-page .form5 .job-list article {
+  width: calc(100% / 2 - 7.5px);
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: flex-start;
+}
+#preferences-page .form5 .job-list article:not(:nth-child(2n)) {
+  margin-right: 15px;
+}
+#preferences-page .form5 .job-list article img {
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+#preferences-page .form5 .job-list article .detail .brand {
+  font-size: 13px;
+  color: #B5B5B5;
+  margin-bottom: 3px;
+}
+#preferences-page .form5 .job-list article .detail .job {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#preferences-page .form5 .job-list article .detail .publish, #preferences-page .form5 .job-list article .detail .end {
+  font-size: 12px;
+  color: #a9a9a9;
+  margin-bottom: 5px;
+}
+#preferences-page .form5 .job-list article .detail .ic-primary-button {
+  margin-top: 15px;
+}
+#preferences-page .form5 .ic-paginator {
+  margin-top: 30px;
+}
+#preferences-page .form6 h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=other.css.map */

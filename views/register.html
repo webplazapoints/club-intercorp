@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head></head>
+<body>
+<header hidden></header>
+
+<main id="register-page">
+	<img id="logo" src="../assets/images/logo-intercorp.jpg" alt="Club Intercorp">
+	<form id="form-register">
+		<h1>Reg&iacute;strate</h1>
+		<div class="ic-dropdown mt">
+			<i class="fas fa-angle-down" aria-hidden="true"></i>
+			<span class="placeholder">Tipo de documento</span>
+			<input type="text" readonly>
+			<input type="hidden">
+			<ul class="ic-droplist">
+				<li class="disabled">Elegir un tipo</li>
+				<li class="ic-dropitem" data-value="0">DNI</li>
+				<li class="ic-dropitem" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
+				<li class="ic-dropitem" data-value="2">Pasaporte</li>
+				<li class="ic-dropitem" data-value="3">Permiso temporal de permanencia (PTP)</li>
+			</ul>
+		</div>
+		<label class="ic-textfield mt">
+			<span class="placeholder">N&deg; de documento</span>
+			<input type="text">
+		</label>
+		<label class="ic-textfield mt">
+			<span class="placeholder">N&deg; de celular personal</span>
+			<input type="text">
+		</label>
+		<label class="ic-textfield mt">
+			<span class="placeholder">Correo electr&oacute;nico personal</span>
+			<input type="text">
+		</label>
+		<label class="ic-textfield mt">
+			<span class="placeholder">Contrase&ntilde;a</span>
+			<input type="password">
+			<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
+		</label>
+		<label class="ic-checkbox">
+			<input type="checkbox" hidden>
+			<i class="far fa-square" aria-hidden="true"></i>
+			<span class="label">Acepto los <a href="javascript:void(0)" class="open-tyc">t&eacute;rminos y condicines</a></span>
+		</label>
+		<label class="ic-checkbox">
+			<input type="checkbox" hidden>
+			<i class="far fa-square" aria-hidden="true"></i>
+			<span class="label">Acepto las <a href="javascript:void(0)" class="open-conditions">condiciones de tratamiento de datos</a></span>
+		</label>
+		<a href="./home.html" class="ic-primary-button">Registrarme</a>
+		<p class="helper">&iquest;Ya tienes una cuenta? <a href="../index.html">Ingresa aqu&iacute;</a></p class="helper">
+	</form>
+
+	<div class="ic-modal" id="modal-tyc">
+		<div class="content-modal">
+			<div class="header-modal">
+				<h2 class="title">T&eacute;rminos y condiciones</h2>
+				<i class="fas fa-times close-modal" aria-hidden="true"></i>
+			</div>
+			<div class="body-modal">
+				<p class="subtitle">Informaci&oacute;n general</p>
+				<p class="text">Las condiciones siguientes regulan la informaci&oacute;n y el uso permitido de la aplicaci&oacute;n m&oacute;vil para dispositivos (iOS y Android) y del sitio web con URL http://www.clubintercorp.com (en adelante &quot;Aplicaci&oacute;n&quot;), que INTERCORP pone a disposici&oacute;n de los Usuarios de Internet en general y a los Usuarios del Programa de Beneficios en particular.</p>
+				<p class="text">La Aplicaci&oacute;n ha sido creada y dise&ntilde;ada para dar a conocer y permitir el acceso general de todos los Usuarios del Programa de Beneficios, a la informaci&oacute;n, servicios diversos y otras actividades, que ofrece INTERCORP con este Programa. Tambi&eacute;n es un espacio de comunicaci&oacute;n los Usuarios del Programa de Beneficios.</p>
+				<p class="subtitle">Condiciones generales</p>
+				<p class="text">Estas condiciones generales tienen por objeto regular el acceso y la utilizaci&oacute;n de la Aplicaci&oacute;n que INTERCORP pone gratuitamente a disposici&oacute;n de los Usuarios del Programa de Beneficios.</p>
+				<p class="text">El acceso al mismo implica la aceptaci&oacute;n de las condiciones generales aqu&iacute; descritas sin ning&uacute;n tipo de limitaci&oacute;n. La utilizaci&oacute;n de determinados servicios ofrecidos en esta Aplicaci&oacute;n se regir&aacute;, adem&aacute;s, por las condiciones particulares previstas en cada caso, las cuales se entender&aacute;n aceptadas por el solo uso de estos servicios.</p>
+				<p class="subtitle">Condiciones de uso</p>
+				<p class="text">INTERCORP se reserva la facultad de efectuar, en cualquier momento y sin necesidad de previo aviso, modificaciones y actualizaciones de la informaci&oacute;n contenida en la Aplicaci&oacute;n, de la configuraci&oacute;n y presentaci&oacute;n de este y de las condiciones de uso.</p>
+				<p class="text">Por eso se recomienda que los Usuarios del Programa de Beneficios lean atenta y detenidamente estas condiciones de uso cada vez que quieran entrar y hacer uso de la Aplicaci&oacute;n, puesto que &eacute;stas pueden estar sujetas a modificaciones. INTERCORP no garantiza la inexistencia de interrupciones o errores en el acceso al sitio Web o a su contenido, ni que este se encuentre actualizado. INTERCORP llevar&aacute; a cabo, siempre que no implique causas que lo hagan imposible o de dif&iacute;cil ejecuci&oacute;n, y tan pronto tenga noticia de los errores, desconexiones o falta de actualizaci&oacute;n en los contenidos, todas aquellas tareas necesarias para resolver los errores, restablecer la comunicaci&oacute;n y actualizar los contenidos. Tanto el acceso a la Aplicaci&oacute;n como el uso no autorizado que pueda efectuarse de la informaci&oacute;n contenida en el mismo es responsabilidad exclusiva de quien lo realiza.</p>
+				<p class="text">INTERCORP no responder&aacute; de ninguna consecuencia, da&ntilde;o o perjuicio que pudieran derivarse de este acceso o uso.</p>
+				<p class="text">INTERCORP no se hace responsable de los errores de seguridad, que se puedan producir ni de los da&ntilde;os que puedan producirse en el sistema inform&aacute;tico de los Usuarios del Programa de Beneficios (hardware y software), o a los ficheros o documentos almacenados en el mismo, como consecuencia:</p>
+				<ol class="text">
+					<li>de la presencia de un software malicioso en el ordenador del Usuario del Programa de Beneficios que sea utilizado para la conexi&oacute;n a los contenidos de la Aplicaci&oacute;n,</li>
+					<li>de un mal funcionamiento del navegador,</li>
+					<li>del uso de versiones no actualizadas del navegador.</li>
+				</ol>
+				<p class="text">INTERCORP no asume ninguna responsabilidad derivada de los contenidos enlazados desde la Aplicaci&oacute;n, siempre que sean ajenos al mismo, ni garantiza la ausencia de software malicioso u otros elementos en los mismos que puedan producir alteraciones en el sistema inform&aacute;tico (hardware y software), en los documentos o en los ficheros del Usuario del Programa de Beneficios, excluyendo cualquier responsabilidad por los da&ntilde;os de cualquier tipo que pudieran ser causados a los Usuarios del Programa de Beneficios por este motivo.</p>
+				<p class="text">Si se da el caso que cualquier Usuario del Programa de Beneficios o un tercero, considerara que el contenido o los servicios prestados por los sitios webs enlazados son il&iacute;citos o lesionan bienes o derechos del propio Usuario del Programa de Beneficios o de un tercero susceptibles de indemnizaci&oacute;n y que en particular, consistan en cualquiera de los siguientes supuestos:</p>
+				<ol class="text">
+					<li>actividades o contenidos susceptibles de ser considerados delictivos conforme la normativa penal vigente,</li>
+					<li>actividades o contenidos que violen derechos de propiedad intelectual o industrial,</li>
+					<li>actividades o contenidos que atenten o pongan en peligro el orden p&uacute;blico, las buenas costumbres o alguna investigaci&oacute;n penal en curso y/o que amen&aacute;cenla seguridad p&uacute;blica,</li>
+					<li>actividades o contenidos que atenten o pongan en peligro la protecci&oacute;n de la salud p&uacute;blica, el respecto a la dignidad de la persona, principios de no discriminaci&oacute;n, la protecci&oacute;n de la salud y la infancia, entre otros derechos fundamentales.</li>
+				</ol>
+				<p class="text">tendr&aacute; que notificarlo, con las observaciones o il&iacute;citos observados por el mismo.</p>
+				<p class="subtitle">Procedimiento en caso de realizaci&oacute;n de actividades de car&aacute;cter il&iacute;cito</p>
+				<p class="text">Si un Usuario del Programa de Beneficios considera que existen hechos o circunstancias que revelen el car&aacute;cter il&iacute;cito de la utilizaci&oacute;n de cualquier contenido y/o de la realizaci&oacute;n de cualquier actividad en el Web, y en particular, de la violaci&oacute;n de derechos de propiedad intelectual o industrial (patentes, modelos y dibujos industriales, marcas y nombres comerciales, etc.) u otros derechos, tendr&aacute; que enviar una notificaci&oacute;n INTERCORP con el siguiente contenido:</p>
+				<ol class="text">
+					<li>datos de la persona o entidad que hace la reclamaci&oacute;n: nombre, documento de identidad, direcci&oacute;n, tel&eacute;fono y direcci&oacute;n de correo electr&oacute;nico.</li>
+					<li>descripci&oacute;n de la supuesta actividad il&iacute;cita llevada a cabo en la Aplicaci&oacute;n y, en particular, cuando se trate de una supuesta violaci&oacute;n de derechos, la indicaci&oacute;n precisa y concreta de los contenidos protegidos as&iacute; como de su localizaci&oacute;n en la Aplicaci&oacute;n.</li>
+					<li>hechos o circunstancias que revelan el car&aacute;cter il&iacute;cito de esta actividad.</li>
+					<li>en el supuesto de violaci&oacute;n de derechos, firma manuscrita o equivalente, con los datos personales del titular de los derechos supuestamente infringidos o de la persona autorizada para actuar en nombre y por cuenta de esta.</li>
+					<li>declaraci&oacute;n expresa, clara y bajo la responsabilidad de la persona o entidad que hace la reclamaci&oacute;n de que la informaci&oacute;n proporcionada en la notificaci&oacute;n es verdadera y exacta; y del car&aacute;cter il&iacute;cito de la utilizaci&oacute;n de los contenidos o de la realizaci&oacute;n de las actividades descritas.</li>
+				</ol>
+				<p class="subtitle">Datos de contacto de INTERCORP</p>
+				<p class="text">Se pone a disposici&oacute;n de los Usuario del Programa de Beneficios la siguiente informaci&oacute;n para poder dirigir observaciones y/o mejoras para la Aplicaci&oacute;n:</p>
+				<ul class="text">
+					<li>Direcci&oacute;n postal: Carlos Villar&aacute;n No. 140, La Victoria, Lima</li>
+					<li>Correo electr&oacute;nico: clubintercorp@intercorp.com.pe</li>
+					<li>Tel&eacute;fono: (511) 219-2000</li>
+				</ul>
+				<p class="subtitle">Enlaces</p>
+				<p class="text">Todo enlace de terceros la Aplicaci&oacute;n de INTERCORP tiene que hacerse a su p&aacute;gina principal, quedando expresamente prohibidos otros tipos de enlace y cualquiera otro aprovechamiento de los contenidos de la Aplicaci&oacute;n, a favor de terceros no autorizados.</p>
+				<p class="text">El establecimiento de un enlace, implica &uacute;nica y exclusivamente la existencia de relaciones pasadas o presentes entre INTERCORP y el propietario del sitio web donde se establezca, no implica por parte de INTERCORP ni la aceptaci&oacute;n ni la aprobaci&oacute;n de sus contenidos o servicios.</p>
+				<p class="text">INTERCORP no asume ninguna responsabilidad por la informaci&oacute;n contenida en los sitios webs de terceros a los que se pueda acceder por enlaces o buscadores desde la Aplicaci&oacute;n.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="ic-modal" id="modal-tratamiento">
+		<div class="content-modal">
+			<div class="header-modal">
+				<h2 class="title">Condiciones de tratamiento de datos</h2>
+				<i class="fas fa-times close-modal" aria-hidden="true"></i>
+			</div>
+			<div class="body-modal">
+				<p class="subtitle">Propiedad intelectual e industrial</p>
+				<p class="text">Los derechos de propiedad intelectual del Web son de titularidad de INTERCORP a quien corresponde el ejercicio exclusivo de los derechos de explotaci&oacute;n que incluyen la reproducci&oacute;n, la distribuci&oacute;n, la comunicaci&oacute;n p&uacute;blica y la transformaci&oacute;n. A t&iacute;tulo enunciativo este derechos incluyen el software, el c&oacute;digo fuente, el dise&ntilde;o gr&aacute;fico, la estructura de navegaci&oacute;n, los bancos de datos, los textos, las fotograf&iacute;as e im&aacute;genes, y en general todos los contenidos y elementos que contiene. Del mismo modo, las marcas, nombres comerciales o signos distintivos son de titularidad exclusiva de INTERCORP o en su caso, de terceros, salvo que se especifique lo contrario.</p>
+				<p class="text">En el caso que alguna otro sitio Web de terceros cite parte de la informaci&oacute;n contenida en la Aplicaci&oacute;n, INTERCORP mantendr&aacute; bajo su titularidad los derechos de propiedad intelectual e industrial que hacen referencia a sus servicios.</p>
+				<p class="text">Queda expresamente prohibida la cesi&oacute;n de los derechos de propiedad intelectual sobre la Aplicaci&oacute;n. En concreto, est&aacute; prohibida la reproducci&oacute;n, transformaci&oacute;n, distribuci&oacute;n, comunicaci&oacute;n p&uacute;blica, puesta a disposici&oacute;n, extracci&oacute;n, reutilizaci&oacute;n, o la utilizaci&oacute;n de cualquier naturaleza, por cualquier medio o procedimiento, de cualquier de ellos, salvo en los casos que est&eacute; legalmente permitido es decir autorizado por el titular de los correspondientes derechos.</p>
+				<p class="text">La utilizaci&oacute;n no autorizada de la informaci&oacute;n contenida en la Aplicaci&oacute;n, su reventa, as&iacute; como la afectaci&oacute;n lesi&oacute;n de los derechos de Propiedad Intelectual de INTERCORP dar&aacute; lugar a las responsabilidades legalmente establecidas.</p>
+				<p class="text">Los Usuarios del Programa de Beneficios tendr&aacute;n que respetar todos los derechos de propiedad intelectual e industrial sobre la Aplicaci&oacute;n. Sin embargo, los Usuarios del Programa de Beneficios podr&aacute;n visualizar y obtener una copia privada temporal de los contenidos para su uso exclusivo personal y privado en sus sistemas inform&aacute;ticos (software y hardware), siempre que no sea con el fin de desarrollar actividades de car&aacute;cter comercial o profesional, as&iacute; como su distribuci&oacute;n, modificaci&oacute;n, alteraci&oacute;n o descompilaci&oacute;n. La infracci&oacute;n de cualquier de los derechos citados puede constituir una vulneraci&oacute;n de las presentes condiciones, as&iacute; como un delito castigado por el C&oacute;digo Penal.</p>
+				<p class="subtitle">Jurisdicci&oacute;n</p>
+				<p class="text">Para la resoluci&oacute;n de todas las controversias o cuestiones relacionadas con la Aplicaci&oacute;n o de las actividades en &eacute;l desarrolladas, ser&aacute; de aplicaci&oacute;n la legislaci&oacute;n peruana, a la cual se someten expresamente INTERCORP y los Usuarios del Programa de Beneficios, Cualquier controversia referida o relacionada a la negociaci&oacute;n, celebraci&oacute;n, ejecuci&oacute;n, resoluci&oacute;n, interpretaci&oacute;n, eficacia, validez de las condiciones generales, lo cual incluye cualquier cuestionamiento a la validez o eficacia del presente convenio arbitral, deber&aacute; resolverse mediante Arbitraje Ad hoc de Derecho y ser&aacute; resuelta por un &aacute;rbitro &uacute;nico. El &aacute;rbitro &uacute;nico ser&aacute; elegido por las partes en un plazo m&aacute;ximo de diez (10) d&iacute;as calendarios, luego de que una de las partes haya efectuado la solicitud de inicio del arbitraje. En caso en que las partes no lleguen a ponerse de acuerdo sobre la designaci&oacute;n del &aacute;rbitro, dentro del plazo se&ntilde;alado, se recurrir&aacute; al Centro de Arbitraje de la C&aacute;mara de Comercio de Lima a efectos de que realice dicha elecci&oacute;n en un plazo no mayor de diez (10) d&iacute;as h&aacute;biles. La sede y lugar de arbitraje ser&aacute; la ciudad de Lima y la norma aplicable a los temas materia de fondo ser&aacute; la ley peruana. El Laudo Arbitral que emita el &aacute;rbitro &uacute;nico ser&aacute; inapelable y vinculante para las partes, poniendo fin al proceso de manera definitiva, por lo que las partes renuncian a interponer cualquier recurso que tenga por objeto desconocer sus efectos. En todo lo no normado, rige supletoriamente el Decreto Legislativo 1071, “Decreto Legislativo que norma el Arbitraje”.</p>
+				<p class="subtitle">Autorizaci&oacute;n para recopilaci&oacute;n y uso de datos</p>
+				<p class="text">Se informa al titular de datos personales que los datos personales proporcionados a cualquiera de las empresas del Grupo Intercorp y/o sus Socios Estrat&eacute;gicos, incluido aquellos enviados a la Aplicaci&oacute;n por parte del Usuario del Programa de Beneficios, ser&aacute;n utilizados para que dichas empresas y las dem&aacute;s empresas afiliadas a Club Intercorp le otorguen beneficios y/o descuentos. Para estos efectos, el titular autoriza a incluir sus datos personales en la base de datos de Intercorp Per&uacute; Ltd., encargar su tratamiento a terceros y/o a transferirlos a las empresas antes mencionadas, las mismas que se encuentran detalladas en el portal de la Superintendencia del Mercado de Valores (www.smv.gob.pe), as&iacute; como en el portal www.intercorp.com.pe/es. y/o en el portal de Club Intercorp (www.clubintercorp.com.pe).</p>
+				<p class="text">Asimismo, el titular de datos personales autoriza a las empresas del Grupo Intercorp, sus Socios Estrat&eacute;gicos y/o dem&aacute;s empresas afiliadas al Club Intercorp (en este &uacute;ltimo caso &uacute;nica y exclusivamente para el otorgamiento de beneficios y/o descuentos de Club Intercorp) a utilizar los datos personales (incluyendo datos sensibles) proporcionados, aquellos que pudieran encontrarse en fuentes accesibles para el p&uacute;blico o los que hayan sido obtenidos de terceros; para tratamientos que supongan desarrollo de acciones comerciales, incluyendo evaluaciones financieras, la remisi&oacute;n (v&iacute;a medio f&iacute;sico, electr&oacute;nico o telef&oacute;nico) de publicidad, informaci&oacute;n u ofertas (personalizadas o generales) de productos y/o servicios de las empresas del Grupo Intercorp, sus Socios Estrat&eacute;gicos y/o dem&aacute;s empresas afiliadas al Club Intercorp. Para tales efectos, el titular de los datos personales autoriza la transferencia de sus datos personales, a dichas empresas y entre ellas.</p>
+				<p class="text">Se informa al titular de los datos personales, que puede revocar la autorizaci&oacute;n para el tratamiento de sus datos personales en cualquier momento, de conformidad con lo previsto en la Ley de Protecci&oacute;n de Datos Personales (Ley No. 29733) y su Reglamento (Decreto Supremo No. 003-2013-JUS). Para ejercer este derecho, o cualquier otro previsto en dichas normas, el titular de datos personales podr&aacute; presentar su solicitud en cualquiera de las sucursales de las empresas del Grupo Intercorp y/o sus Socios Estrat&eacute;gicos.</p>
+				<p class="subtitle">Exactitud, car&aacute;cter completo y puntualidad de la informaci&oacute;n</p>
+				<p class="text">Aunque usamos todos los medios en nuestro alcance para asegurar la exactitud y el car&aacute;cter completo de la informaci&oacute;n contenida en la Aplicaci&oacute;n. No asumimos responsabilidad alguna en el caso de que la informaci&oacute;n que se encuentra disponible en el mismo no sea exacta o completa. Cualquier modificaci&oacute;n que el Usuario del Programa de Beneficios realice sobre el material disponible en la Aplicaci&oacute;n se realizar&aacute; por su propia cuenta y riesgo. Asimismo, el Usuario del Programa de Beneficios acepta que ser&aacute; su responsabilidad los eventuales cambios que se puedan producir.</p>
+				<p class="text">Las ofertas publicadas en la Aplicaci&oacute;n se rigen seg&uacute;n sus t&eacute;rminos y condiciones.</p>
+				<p class="subtitle">Acceso, contenidos y participaci&oacute;n del usuario</p>
+				<p class="text">El Usuario del Programa de Beneficios se compromete a hacer un uso diligente de sus datos de acceso, a no ponerlas a disposici&oacute;n de terceros y a comunicar a INTERCORP la p&eacute;rdida o robo y el posible acceso por parte de un tercero. El uso y la confidencialidad de dicha clave es exclusiva responsabilidad del Usuario del Programa de Beneficios titular de la misma, asumiendo todo da&ntilde;o de cualquier naturaleza derivada de la utilizaci&oacute;n de la clave de seguridad por parte de terceros.</p>
+				<p class="text">Cualquier material o comunicaci&oacute;n no personal que el Usuario del Programa de Beneficios transmita en este sitio Web por e-mail o cualquier otro medio, incluyendo datos, preguntas, comentarios, sugerencias o similares, es y ser&aacute; tratada como no confidencial y sin derechos de propiedad intelectual. Cualquier cosa que el Usuario del Programa de Beneficios transmita en la Aplicaci&oacute;n pasa a ser propiedad de INTERCORP y se puede utilizar para cualquier finalidad, incluyendo, sin car&aacute;cter limitativo, la reproducci&oacute;n, acceso, transmisi&oacute;n, publicaci&oacute;n, emisi&oacute;n y colocaci&oacute;n de contenidos en la Aplicaci&oacute;n. A&uacute;n m&aacute;s, INTERCORP es totalmente libre de usar, para cualquier finalidad que estime oportuna (incluyendo, sin car&aacute;cter limitativo, el desarrollo, fabricaci&oacute;n, publicidad y marketing de productos), las ideas, material gr&aacute;fico, invenciones, desarrollos, sugerencias o conceptos en general contenidos en cualquier comunicaci&oacute;n enviada por cualquier Usuario del Programa de Beneficios que haga uso de la Aplicaci&oacute;n. Dicho uso no tendr&aacute; compensaci&oacute;n para la parte que ha facilitado la informaci&oacute;n. Facilitando informaci&oacute;n, el Usuario del Programa de Beneficios tambi&eacute;n garantiza en su calidad de propietario del material/contenido proporcionado, que no es de car&aacute;cter difamatorio y que su uso por parte de INTERCORP no violar&aacute; derechos de terceras personas ni comportar&aacute; un incumplimiento por nuestra parte de la legislaci&oacute;n aplicable. INTERCORP no tiene ninguna obligaci&oacute;n de utilizar la informaci&oacute;n facilitada.</p>
+				<p class="text">Sin perjuicio de lo anterior, el Usuario del Programa de Beneficios conoce y asume que se pondr&aacute; en conocimiento de las autoridades administrativas o judiciales aquellos hechos que pudieran ser constitutivos de una actividad il&iacute;cita, sin necesidad de comunicarlo previamente al Usuario del Programa de Beneficios.</p>
+				<p class="text">Los Usuarios del Programa de Beneficios deben suspender el uso de este sitio Web inmediatamente si no est&aacute;n de acuerdo o no aceptan todos los T&eacute;rminos y Condiciones. INTERCORP se reservan el derecho de eliminar o prohibir a cualquier Usuario del Programa de Beneficios la utilizaci&oacute;n de la Aplicaci&oacute;n a su sola discreci&oacute;n.</p>
+				<p class="text">Debido a razones corporativas y de estrategia de mercado, para efectos de lo se&ntilde;alado en la presente p&aacute;gina web, la referencia a INTERCORP y a sus empresas afiliadas incluir&aacute; tanto a las sociedades integrantes del grupo econ&oacute;mico de Intercorp Per&uacute; Ltd. (para mayor informaci&oacute;n ver en www.smv.gob.pe) como a las empresas vinculadas a Nexus Group y/o a sus fundadores.</p>
+				<p class="subtitle">Datos personales</p>
+				<p class="text">Se informa al titular de datos personales que los datos personales proporcionados a cualquiera de las empresas del Grupo Intercorp y/o sus Socios Estrat&eacute;gicos ser&aacute;n utilizados para que dichas empresas y las dem&aacute;s empresas afiliadas a Club Intercorp le otorguen beneficios y/o descuentos. Para estos efectos, el titular autoriza a incluir sus datos personales en la base de datos de Intercorp Per&uacute; Ltd., encargar su tratamiento a terceros y/o a transferirlos a las empresas antes mencionadas, las mismas que se encuentran detalladas en el portal de la Superintendencia del Mercado de Valores (www.smv.gob.pe), as&iacute; como en el portal www.intercorp.com.pe/es. y/o en el portal de Club Intercorp (www.clubintercorp.com.pe).</p>
+				<p class="text">Asimismo, el titular de datos personales autoriza a las empresas del Grupo Intercorp, sus Socios Estrat&eacute;gicos y/o dem&aacute;s empresas afiliadas al Club Intercorp (en este &uacute;ltimo caso &uacute;nica y exclusivamente para el otorgamiento de beneficios y/o descuentos de Club Intercorp) a utilizar los datos personales (incluyendo datos sensibles) proporcionados, aquellos que pudieran encontrarse en fuentes accesibles para el p&uacute;blico o los que hayan sido obtenidos de terceros; para tratamientos que supongan desarrollo de acciones comerciales, incluyendo evaluaciones financieras, la remisi&oacute;n (v&iacute;a medio f&iacute;sico, electr&oacute;nico o telef&oacute;nico) de publicidad, informaci&oacute;n u ofertas (personalizadas o generales) de productos y/o servicios de las empresas del Grupo Intercorp, sus Socios Estrat&eacute;gicos y/o dem&aacute;s empresas afiliadas al Club Intercorp. Para tales efectos, el titular de los datos personales autoriza la transferencia de sus datos personales, a dichas empresas y entre ellas.</p>
+				<p class="text">Se informa al titular de los datos personales, que puede revocar la autorizaci&oacute;n para el tratamiento de sus datos personales en cualquier momento, de conformidad con lo previsto en la Ley de Protecci&oacute;n de Datos Personales (Ley No. 29733) y su Reglamento (Decreto Supremo No. 003-2013-JUS). Para ejercer este derecho, o cualquier otro previsto en dichas normas, el titular de datos personales podr&aacute; presentar su solicitud en cualquiera de las sucursales de las empresas del Grupo Intercorp y/o sus Socios Estrat&eacute;gicos.</p>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer hidden></footer>
+
+<script src="../scripts/jquery.min.js"></script>
+<script src="../scripts/util.js"></script>
+<script type="text/javascript">
+	setTimeout(function(){
+		$(function() {
+			var register = new Register();
+			register.init();
+			icTextfield();
+		});
+	}, 500);
+</script>
+</body>
+</html>

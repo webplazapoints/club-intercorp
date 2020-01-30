@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head></head>
+<body>
+	<header hidden></header>
+
+	<main id="login-page">
+		<img id="logo" src="./assets/images/logo-intercorp.jpg" alt="Club Intercorp">
+		<form id="form-login">
+			<h1>Ingresar</h1>
+			<label class="ic-textfield">
+				<span class="placeholder">N&deg; de DNI, pasaporte o carnet de extranjer&iacute;a</span>
+				<input type="text">
+			</label>
+			<label class="ic-checkbox">
+				<input type="checkbox" hidden>
+				<i class="far fa-square" aria-hidden="true"></i>
+				<span class="label">Recordar n&uacute;mero</span>
+			</label>
+			<a href="./views/home.html" class="ic-primary-button">Ver mis beneficios</a>
+			<p class="helper">&iquest;No tienes una cuenta? <a href="./views/register.html">Reg&iacute;strate aqu&iacute;</a></p class="helper">
+			<p class="helper"><a href="">&iquest;No puedes ingresar?</a></p>
+		</form>
+	</main>
+
+	<footer hidden></footer>
+
+	<script src="../scripts/jquery.min.js"></script>
+	<script src="../scripts/util.js"></script>
+	<script type="text/javascript">
+		setTimeout(function(){
+			$(function() {
+				var login = new Login();
+				login.init();
+			});
+		}, 1000);
+	</script>
+</body>
+</html>

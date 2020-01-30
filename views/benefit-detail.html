@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head></head>
+<body>
+<header></header>
+
+<main id="benefit-detail-page" class="container">
+	<a class="back" href="javascript:history.back()"><i class="fas fa-arrow-left" aria-hidden="true"></i>Atr&aacute;s</a>
+	<div>
+		<div class="image">
+			<img src="../assets/images/benefit-detail.png" alt="">
+		</div>
+		<div class="content">
+			<p class="category"><i class="fas fa-shopping-bag" aria-hidden="true"></i>Compras</p>
+			<p class="brand">Promart</p>
+			<div class="block">
+				<div>
+					<h1 class="title">30% de dscto. en parrillas</h1>
+					<p class="description">Los miembros del Club Intercorp accederán a 30% de dscto. en las parrillas a gas Weber en Promart Homecenter.</p>
+					<div class="buttons">
+						<a class="ic-primary-button" id="generateModal" href="javascript:void(0)">Generar cup&oacute;n</a>
+						<a class="ic-primary-button disabled" hidden href="javascript:void(0)">Cup&oacute;n informativo</a>
+					</div>
+					<p class="until">V&aacute;lido desde el 27/01/2020 hasta 14/02/2020</p>
+				</div>
+				<img src="../assets/images/benefit-brand-detail.png" alt="">
+			</div>
+			<div class="information">
+				<div class="tabs">
+					<span class="active" data-tab="obtain">&iquest;C&oacute;mo obtenerlo?</span>
+					<span data-tab="restrictions">Restricciones</span>
+				</div>
+				<div class="content">
+					<div data-content="obtain">
+						<p>Presentando su DNI en cualquier tienda de Promart a nivel nacional; o comprando en www.promart.pe ingresando con el correo con el que se registraron al Club Intercorp.</p>
+					</div>
+					<div data-content="restrictions">
+						<p>Promoción válida hasta el 31 de diciembre de 2019 y exclusiva para las parrillas a gas Weber. Válido solo para los miembros del Club Intercorp. No acumulable con otras promociones. Stock mínimo para la promoción: 5 unidades por sku. Al realizar la compra en tienda física, presentar DNI e identificarse como miembro del Club Intercorp. Al realizar la compra por la página web, ingresa el correo con el cual se inscribió en el Club Intercorp. Para poder disfrutar del beneficio tendrás que tener al menos un mes como miembro del Club Intercorp.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ic-modal" id="modal-cupon">
+		<div class="content-modal">
+			<div class="header-modal">
+				<h2 class="title">Generar cup&oacute;n</h2>
+				<i class="fas fa-times close-modal" aria-hidden="true"></i>
+			</div>
+			<div class="body-modal">
+				<p>Est&aacute;s a punto de generar un cup&oacute;n, este tiene un tiempo de expiraci&oacute;n que podr&aacute;s visualizar en la zona de <a class="ic-inline-link" href="javascript:void(0)">tus cupones</a>.</p>
+				<p>Enviar&aacute;s este cup&oacute;n a:</p>
+				<div class="email">
+					<label class="ic-textfield">
+						<span class="placeholder">Correo electr&oacute;nico</span>
+						<input type="text">
+					</label>
+					<button type="button" id="generateCoupon" class="ic-primary-button">
+						<span>Generar cup&oacute;n</span>
+						<div class="ic-button-loader"><div></div><div></div><div></div><div></div></div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="content-modal success-send">
+			<img src="../assets/images/success-send.png" alt="">
+			<p class="title">Cup&oacute;n generado</p>
+			<p>Tu cup&oacute;n ha sido generado con &eacute;xito, lo encontrar&aacute;s en la zona de <a class="ic-inline-link" href="javascript:void(0)">tus canjes</a>. Aseg&uacute;rate de utilizarlo antes de la fecha de expiraci&oacute;n.</p>
+			<button class="ic-primary-button ok" type="button">Entendido</button>
+		</div>
+	</div>
+</main>
+
+<footer></footer>
+
+<script src="../scripts/jquery.min.js"></script>
+<script src="../scripts/util.js"></script>
+<script type="text/javascript">
+	setTimeout(function(){
+		$(function(){
+			var benefitDetail = new BenefitDetail();
+			benefitDetail.init();
+		});
+	}, 500);
+</script>
+</body>
+</html>

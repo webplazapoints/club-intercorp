@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head></head>
+<body>
+<header></header>
+
+<main id="coupons-page" class="container">
+	<a class="back" href="javascript:history.back()"><i class="fas fa-arrow-left" aria-hidden="true"></i>Atr&aacute;s</a>
+	<div class="title">
+		<h1>Mis cupones</h1>
+		<div class="ic-dropdown">
+			<i class="fas fa-angle-down" aria-hidden="true"></i>
+			<span class="placeholder">Ordenar por</span>
+			<input type="text" readonly>
+			<input type="hidden">
+			<ul class="ic-droplist">
+				<li class="disabled">Elegir</li>
+				<li class="ic-dropitem" data-value="0">Destacados</li>
+				<li class="ic-dropitem" data-value="1">Nombre A - Z</li>
+				<li class="ic-dropitem" data-value="2">Nombre Z - A</li>
+				<li class="ic-dropitem" data-value="3">Fecha de expiraci&oacute;n</li>
+				<li class="ic-dropitem" data-value="4">Fecha de generaci&oacute;n</li>
+			</ul>
+			<select id="" class="ic-dropdown-mobile">
+				<option value="0">Destacados</option>
+				<option value="1">Nombre A - Z</option>
+				<option value="2">Nombre Z - A</option>
+				<option value="3">Fecha de expiraci&oacute;n</option>
+				<option value="4">Fecha de generaci&oacute;n</option>
+			</select>
+		</div>
+	</div>
+	<div class="tabs">
+		<span class="active" data-tab="to-expire">Por expirar</span>
+		<span data-tab="expired">Expirados</span>
+	</div>
+	<div class="coupon-list">
+		<section data-content="to-expire">
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image"><img src="../assets/images/benefit1.png" alt=""></div>
+				<div class="detail">
+					<div>
+						<p class="brand">Innova Schools</p>
+						<p class="name">3er hermano sin cuota de ingreso</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image"><img src="../assets/images/benefit2.png" alt=""></div>
+				<div class="detail">
+					<div>
+						<p class="brand">Cl&iacute;nica Aviva</p>
+						<p class="name">5% de descuento</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image"><img src="../assets/images/benefit3.png" alt=""></div>
+				<div class="detail">
+					<div>
+						<p class="brand">Promart</p>
+						<p class="name">30% de dscto en parrilas</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image"><img src="../assets/images/benefit4.png" alt=""></div>
+				<div class="detail">
+					<div>
+						<p class="brand">Esan | Graduate School of Business</p>
+						<p class="name">Hasta 45% de descuento</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+			<div class="ic-paginator">
+				<button type="button" data-page="prev" class="disabled">Anterior</button>
+				<select id="cboPaginator" class="ic-paginator-mobile">
+					<option value="1">P&aacute;gina 1</option>
+					<option value="2">P&aacute;gina 2</option>
+					<option value="3">P&aacute;gina 3</option>
+					<option value="4">P&aacute;gina 4</option>
+					<option value="5">P&aacute;gina 5</option>
+				</select>
+				<button type="button" data-page="1" class="active">1</button>
+				<button type="button" data-page="2">2</button>
+				<button type="button" data-page="3">3</button>
+				<button type="button" data-page="4">4</button>
+				<button type="button" data-page="5">5</button>
+				<button type="button" data-page="next">Siguiente</button>
+			</div>
+		</section>
+		<section data-content="expired">
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image">
+					<div class="flag-expired">Expira en <strong class="timer">02:03:45</strong></div>
+					<img src="../assets/images/benefit1.png" alt="">
+				</div>
+				<div class="detail">
+					<div>
+						<p class="brand">Innova Schools</p>
+						<p class="name">3er hermano sin cuota de ingreso</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image">
+					<div class="flag-expired">Expira en <strong class="timer">02:03:45</strong></div>
+					<img src="../assets/images/benefit2.png" alt="">
+				</div>
+				<div class="detail">
+					<div>
+						<p class="brand">Cl&iacute;nica Aviva</p>
+						<p class="name">5% de descuento</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image">
+					<div class="flag-expired">Expira en <strong class="timer">02:03:45</strong></div>
+					<img src="../assets/images/benefit3.png" alt="">
+				</div>
+				<div class="detail">
+					<div>
+						<p class="brand">Promart</p>
+						<p class="name">30% de dscto en parrilas</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="benefit">
+				<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
+				<div class="image">
+					<div class="flag-expired">Expira en <strong class="timer">02:03:45</strong></div>
+					<img src="../assets/images/benefit4.png" alt="">
+				</div>
+				<div class="detail">
+					<div>
+						<p class="brand">Esan | Graduate School of Business</p>
+						<p class="name">Hasta 45% de descuento</p>
+					</div>
+					<div class="buttons">
+						<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
+						<ul class="share">
+							<li><i class="fas fa-share-alt" aria-hidden="true"></i></li>
+							<li><i class="fas fa-heart" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+			<div class="ic-paginator">
+				<button type="button" data-page="prev" class="disabled">Anterior</button>
+				<select id="cboPaginator" class="ic-paginator-mobile">
+					<option value="1">P&aacute;gina 1</option>
+					<option value="2">P&aacute;gina 2</option>
+					<option value="3">P&aacute;gina 3</option>
+					<option value="4">P&aacute;gina 4</option>
+					<option value="5">P&aacute;gina 5</option>
+				</select>
+				<button type="button" data-page="1" class="active">1</button>
+				<button type="button" data-page="2">2</button>
+				<button type="button" data-page="3">3</button>
+				<button type="button" data-page="4">4</button>
+				<button type="button" data-page="5">5</button>
+				<button type="button" data-page="next">Siguiente</button>
+			</div>
+		</section>
+	</div>
+</main>
+
+<footer></footer>
+
+<script src="../scripts/jquery.min.js"></script>
+<script src="../scripts/util.js"></script>
+<script type="text/javascript">
+	setTimeout(function(){
+		$(function(){
+			var coupon = new Coupon();
+			coupon.init();
+		});
+	}, 500);
+</script>
+</body>
+</html>

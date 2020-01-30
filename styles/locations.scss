@@ -1,0 +1,83 @@
+@import '../styles/style.variable.scss';
+
+#locations-page {
+	padding-top: 50px;
+	padding-bottom: 150px;
+	.back {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		color: $blue;
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		.fas {
+			color: $blue;
+			margin-right: 5px;
+		}
+	}
+	h1 {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	p {
+		font-size: 13px;
+	}
+	.search {
+		display: flex;
+		max-width: 470px;
+		margin-top: 20px;
+		.ic-textfield { margin-right: 10px; }
+	}
+	.map {
+		position: relative;
+		margin-top: 30px;
+		border-radius: 10px;
+		overflow: hidden;
+		iframe {
+			border: none;
+			width: 100%;
+			height: 640px;
+		}
+		.place-detail {
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			.fas {
+				color: $blue;
+				font-size: 38px;
+			}
+			.block {
+				position: absolute;
+				background-color: white;
+				border: 1px solid $borderGray;
+				box-shadow: $boxShadow;
+				padding: 15px;
+				bottom: 35px;
+				left: 30px;
+				width: 215px;
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				img { width: 60px; }
+				p {
+					margin-left: 12px;
+					.brand {
+						font-size: 13px;
+						font-weight: bold;
+						display: block;
+					}
+					.location {
+						font-size: 12px;
+						color: $gray;
+						margin-top: 5px;
+						display: block;
+					}
+				}
+			}
+			@media screen and (max-width: 560px) {
+				right: 80%;
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+#login-page, #register-page {
+  min-height: 100vh;
+  background-image: url(../assets/images/background-login.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 100px 20px 20px;
+}
+#login-page #logo, #register-page #logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 160px;
+  transition: 0.2s;
+}
+@media screen and (max-width: 440px) {
+  #login-page #logo, #register-page #logo {
+    left: 20px;
+  }
+}
+#login-page #form-login, #login-page #form-register, #register-page #form-login, #register-page #form-register {
+  width: 100%;
+  max-width: 400px;
+}
+#login-page #form-login h1, #login-page #form-register h1, #register-page #form-login h1, #register-page #form-register h1 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#login-page #form-login .mt, #login-page #form-register .mt, #register-page #form-login .mt, #register-page #form-register .mt {
+  margin-top: 10px;
+}
+#login-page #form-login .ic-dropdown:not(.focus) .placeholder, #login-page #form-register .ic-dropdown:not(.focus) .placeholder, #register-page #form-login .ic-dropdown:not(.focus) .placeholder, #register-page #form-register .ic-dropdown:not(.focus) .placeholder {
+  color: #484848;
+}
+#login-page #form-login .ic-textfield:not(.focus) .placeholder, #login-page #form-register .ic-textfield:not(.focus) .placeholder, #register-page #form-login .ic-textfield:not(.focus) .placeholder, #register-page #form-register .ic-textfield:not(.focus) .placeholder {
+  color: #484848;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 30px);
+  overflow: hidden;
+}
+#login-page #form-login .ic-textfield, #login-page #form-login .ic-dropdown, #login-page #form-register .ic-textfield, #login-page #form-register .ic-dropdown, #register-page #form-login .ic-textfield, #register-page #form-login .ic-dropdown, #register-page #form-register .ic-textfield, #register-page #form-register .ic-dropdown {
+  border-color: transparent;
+}
+#login-page #form-login .ic-checkbox, #login-page #form-register .ic-checkbox, #register-page #form-login .ic-checkbox, #register-page #form-register .ic-checkbox {
+  margin-top: 10px;
+}
+#login-page #form-login .ic-checkbox .far, #login-page #form-login .ic-checkbox .label, #login-page #form-register .ic-checkbox .far, #login-page #form-register .ic-checkbox .label, #register-page #form-login .ic-checkbox .far, #register-page #form-login .ic-checkbox .label, #register-page #form-register .ic-checkbox .far, #register-page #form-register .ic-checkbox .label {
+  color: #fff;
+}
+#login-page #form-login .ic-checkbox .label, #login-page #form-register .ic-checkbox .label, #register-page #form-login .ic-checkbox .label, #register-page #form-register .ic-checkbox .label {
+  font-weight: 300;
+}
+#login-page #form-login .ic-checkbox.on i, #login-page #form-register .ic-checkbox.on i, #register-page #form-login .ic-checkbox.on i, #register-page #form-register .ic-checkbox.on i {
+  color: #fff;
+}
+#login-page #form-login .ic-primary-button, #login-page #form-register .ic-primary-button, #register-page #form-login .ic-primary-button, #register-page #form-register .ic-primary-button {
+  margin: 30px 0 20px 0;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+#login-page #form-login .helper, #login-page #form-register .helper, #register-page #form-login .helper, #register-page #form-register .helper {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#login-page #form-login .helper a, #login-page #form-register .helper a, #register-page #form-login .helper a, #register-page #form-register .helper a {
+  color: #fff;
+  font-size: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+#login-page #modal-tyc .content-modal, #login-page #modal-tratamiento .content-modal, #register-page #modal-tyc .content-modal, #register-page #modal-tratamiento .content-modal {
+  max-width: 800px;
+}
+#login-page #modal-tyc .content-modal .body-modal .subtitle, #login-page #modal-tratamiento .content-modal .body-modal .subtitle, #register-page #modal-tyc .content-modal .body-modal .subtitle, #register-page #modal-tratamiento .content-modal .body-modal .subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#login-page #modal-tyc .content-modal .body-modal .subtitle:not(:first-child), #login-page #modal-tratamiento .content-modal .body-modal .subtitle:not(:first-child), #register-page #modal-tyc .content-modal .body-modal .subtitle:not(:first-child), #register-page #modal-tratamiento .content-modal .body-modal .subtitle:not(:first-child) {
+  margin-top: 30px;
+}
+#login-page #modal-tyc .content-modal .body-modal .text, #login-page #modal-tratamiento .content-modal .body-modal .text, #register-page #modal-tyc .content-modal .body-modal .text, #register-page #modal-tratamiento .content-modal .body-modal .text {
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+#login-page #modal-tyc .content-modal .body-modal ul, #login-page #modal-tyc .content-modal .body-modal ol, #login-page #modal-tratamiento .content-modal .body-modal ul, #login-page #modal-tratamiento .content-modal .body-modal ol, #register-page #modal-tyc .content-modal .body-modal ul, #register-page #modal-tyc .content-modal .body-modal ol, #register-page #modal-tratamiento .content-modal .body-modal ul, #register-page #modal-tratamiento .content-modal .body-modal ol {
+  padding-left: 30px;
+}
+
+/*# sourceMappingURL=login-register.css.map */

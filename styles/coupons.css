@@ -1,0 +1,245 @@
+#coupons-page {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+#coupons-page .back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0039A6;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#coupons-page .back .fas {
+  color: #0039A6;
+  margin-right: 5px;
+}
+#coupons-page .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#coupons-page .title h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#coupons-page .title .ic-dropdown {
+  max-width: 220px;
+  z-index: 1;
+}
+@media screen and (max-width: 480px) {
+  #coupons-page .title {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  #coupons-page .title h1 {
+    margin-bottom: 15px;
+  }
+}
+#coupons-page .tabs {
+  display: flex;
+  margin-bottom: 10px;
+}
+#coupons-page .tabs span {
+  font-size: 13px;
+  color: #B5B5B5;
+  margin-right: 50px;
+  transition: 0.2s;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+#coupons-page .tabs span.active {
+  color: #1A8EAD;
+  font-weight: 500;
+  box-shadow: inset 0px -2px 0px 0px #1A8EAD;
+}
+#coupons-page .coupon-list {
+  margin-top: 40px;
+}
+#coupons-page .coupon-list section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+#coupons-page .coupon-list section[data-content=expired] {
+  display: none;
+}
+#coupons-page .coupon-list section .benefit {
+  width: calc(100% / 4 - 60px / 4);
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+#coupons-page .coupon-list section .benefit:not(:nth-child(4n)) {
+  margin-right: 20px;
+}
+#coupons-page .coupon-list section .benefit .tag-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #EC00A6;
+  color: white;
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 7px;
+  z-index: 1;
+}
+#coupons-page .coupon-list section .benefit .tag-new .far {
+  color: white;
+  font-size: 12px;
+  margin-right: 3px;
+}
+#coupons-page .coupon-list section .benefit .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 240px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+#coupons-page .coupon-list section .benefit .image img {
+  width: 100%;
+}
+#coupons-page .coupon-list section .benefit .image .flag-expired {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+}
+#coupons-page .coupon-list section .benefit .image .flag-expired strong {
+  margin-left: 4px;
+  color: white;
+}
+#coupons-page .coupon-list section .benefit .detail {
+  padding-top: 15px;
+}
+#coupons-page .coupon-list section .benefit .detail .brand {
+  font-size: 13px;
+  color: #B5B5B5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#coupons-page .coupon-list section .benefit .detail .name {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .ic-primary-button {
+  padding: 0 30px;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .share {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .share li:not(:last-child) {
+  margin-right: 10px;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .share li i {
+  font-size: 20px;
+  color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .share li:first-child i {
+  -webkit-text-stroke: 1px #1A8EAD;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .share li:last-child i {
+  -webkit-text-stroke: 1px #D82323;
+}
+#coupons-page .coupon-list section .benefit .detail .buttons .share li:active i {
+  transform: scale(0.95);
+}
+@media (hover: hover) {
+  #coupons-page .coupon-list section .benefit .detail .buttons .share li:first-child:hover i {
+    color: #1A8EAD;
+  }
+  #coupons-page .coupon-list section .benefit .detail .buttons .share li:last-child:hover i {
+    color: #D82323;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #coupons-page .coupon-list section .benefit {
+    width: calc(100% / 2 - 10px);
+    margin-bottom: 20px;
+  }
+  #coupons-page .coupon-list section .benefit:not(:nth-child(2n)) {
+    margin-right: 20px;
+  }
+  #coupons-page .coupon-list section .benefit:nth-child(2n), #coupons-page .coupon-list section .benefit:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  #coupons-page .coupon-list section .benefit {
+    width: 100%;
+    margin-right: 0 !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  #coupons-page .coupon-list section .benefit .image {
+    width: 30%;
+  }
+  #coupons-page .coupon-list section .benefit .detail {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 440px) {
+  #coupons-page .coupon-list section .benefit {
+    padding: 0;
+    overflow: hidden;
+  }
+  #coupons-page .coupon-list section .benefit .image {
+    border-radius: 0;
+    height: 100%;
+    max-height: none;
+    position: relative;
+  }
+  #coupons-page .coupon-list section .benefit .image img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+  }
+  #coupons-page .coupon-list section .benefit .detail {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #coupons-page .coupon-list section .benefit .detail .buttons .ic-primary-button {
+    padding: 0 15px;
+  }
+}
+#coupons-page .coupon-list section .ic-paginator {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=coupons.css.map */

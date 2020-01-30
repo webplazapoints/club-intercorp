@@ -1,0 +1,230 @@
+@import '../styles/style.variable.scss';
+
+#preferences-page {
+	padding-top: 50px;
+	padding-bottom: 150px;
+	.back {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		color: $blue;
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		.fas {
+			color: $blue;
+			margin-right: 5px;
+		}
+	}
+	h1 {
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+	.content {
+		display: flex;
+		align-items: flex-start;
+		.menu-prefs {
+			width: 360px;
+			padding: 20px;
+			list-style: none;
+			border: 1px solid $borderGray;
+			border-radius: 10px;
+			li:not(.divider) {
+				display: flex;
+				align-items: center;
+				padding: 15px 10px;
+				border-radius: 10px;
+				cursor: pointer;
+				transition: $fast;
+				.fas {
+					width: 20px;
+					text-align: center;
+					color: $placeholder;
+					font-size: 17px;
+					margin-right: 10px;
+				}
+				span {
+					font-size: 13px;
+				}
+				img { 
+					width: 20px;
+					margin-right: 10px;
+				}
+				&:hover { background-color: $whiteHover; }
+				&.active {
+					background-color: $blue2;
+					.fas, span { color: white; }
+				}
+			}
+			.divider {
+				margin: 10px 0;
+				height: 1px;
+				display: block;
+				width: 100%;
+				background-color: $borderGray;
+			}
+		}
+	}
+	.forms {
+		width: calc(100% - 360px);
+		margin-left: 50px;
+		& > *:not(.form1) { display: none; }
+		.form1, .form3 {
+			h2 {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			& > div:not(:last-child) { margin-bottom: 10px; }
+			.mr { margin-right: 10px; }
+			.row1 {
+				display: flex;
+				.ic-dropdown { width: 30%; }
+				.ic-textfield { width: 70%; }
+			}
+			.row2, .row4 {
+				display: flex;
+				label:first-child { width: 60%; }
+				label:last-child { width: 40%; }
+			}
+			.row3 {
+				display: flex;
+				.ic-dropdown { width: 50%; }
+			}
+			.row5 {
+				display: flex;
+				.ic-dropdown { width: calc(100% / 3); }
+			}
+			.buttons {
+				margin-top: 20px;
+				.ic-primary-button {
+					line-height: 50px;
+					margin-right: 10px;
+				}
+				.ic-secondary-button { padding: 0 30px; }
+			}
+		}
+		.form2 {
+			h2 {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			.tabs {
+				display: flex;
+				margin-bottom: 20px;
+				span {
+					font-size: 13px;
+					color: $placeholder;
+					margin-right: 30px;
+					transition: $fast;
+					padding-bottom: 10px;
+					cursor: pointer;
+					&.active {
+						color: $blue2;
+						font-weight: 500;
+						box-shadow: inset 0px -2px 0px 0px $blue2;
+					}
+				}
+			}
+			.form-tabs {
+				.ic-textfield { margin-bottom: 10px; }
+				[data-content="email"] {
+					display: none;
+					p {
+						font-weight: 500;
+						font-size: 13px;
+						margin-bottom: 15px;
+					}
+					.ic-radio { margin-bottom: 20px; }
+					.unsubscribe {
+						-webkit-appearance: none;
+						color: $red;
+						border: none;
+						background: transparent;
+						font-weight: 500;
+						font-size: 12px;
+						display: flex;
+						align-items: center;
+						margin-top: 30px;
+						cursor: pointer;
+						user-select: none;
+						outline: none;
+						.fas {
+							color: $red;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+		.form4 {
+			h2 {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: 13px;
+			}
+			.ic-textfield {
+				margin-top: 15px;
+				max-width: 300px;
+			}
+		}
+	}
+	.form5 {
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		.job-list {
+			display: flex;
+			flex-wrap: wrap;
+			article {
+				width: calc(100% / 2 - 7.5px);
+				border: 1px solid $borderGray;
+				border-radius: 10px;
+				padding: 20px;
+				margin-bottom: 15px;
+				box-shadow: $boxShadow;
+				display: flex;
+				align-items: flex-start;
+				&:not(:nth-child(2n)) { margin-right: 15px; }
+				img {
+					border: 1px solid $borderGray;
+					border-radius: 10px;
+					margin-right: 15px;
+				}
+				.detail	{
+					.brand {
+						font-size: 13px;
+						color: $placeholder;
+						margin-bottom: 3px;
+					}
+					.job {
+						font-size: 15px;
+						font-weight: bold;
+						margin-bottom: 10px;
+					}
+					.publish, .end {
+						font-size: 12px;
+						color: $gray;
+						margin-bottom: 5px;
+					}
+					.ic-primary-button { margin-top: 15px; }
+				}
+			}
+		}
+		.ic-paginator { margin-top: 30px; }
+	}
+	.form6 {
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+	}
+}

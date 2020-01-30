@@ -1,0 +1,208 @@
+@import '../styles/style.variable.scss';
+
+#coupons-page {
+	padding-top: 50px;
+	padding-bottom: 150px;
+	.back {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		color: $blue;
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		.fas {
+			color: $blue;
+			margin-right: 5px;
+		}
+	}
+	.title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		h1 {
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.ic-dropdown {
+			max-width: 220px;
+			z-index: 1;
+		}
+		@media screen and (max-width: 480px){
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 40px;
+			h1 { margin-bottom: 15px; }
+		}
+	}
+	.tabs {
+		display: flex;
+		margin-bottom: 10px;
+		span {
+			font-size: 13px;
+			color: $placeholder;
+			margin-right: 50px;
+			transition: $fast;
+			padding-bottom: 10px;
+			cursor: pointer;
+			&.active {
+				color: $blue2;
+				font-weight: 500;
+				box-shadow: inset 0px -2px 0px 0px $blue2;
+			}
+		}
+	}
+	.coupon-list {
+		margin-top: 40px;
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+			&[data-content="expired"] { display: none; }
+			.benefit {
+				width: calc(100% / 4 - 60px / 4);
+				border: 1px solid $borderGray;
+				border-radius: 10px;
+				padding: 20px;
+				position: relative;
+				margin-bottom: 20px;
+				&:not(:nth-child(4n)) { margin-right: 20px; }
+				.tag-new {
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					background-color: $pink;
+					color: white;
+					font-size: 12px;
+					padding: 7px;
+					border-radius: 7px;
+					z-index: 1;
+					.far {
+						color: white;
+						font-size: 12px;
+						margin-right: 3px;
+					}
+				}
+				.image {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					max-height: 240px;
+					width: 100%;
+					overflow: hidden;
+					border-radius: 10px;
+					position: relative;
+					img { width: 100%; }
+					.flag-expired {
+						position: absolute;
+						display: block;
+						height: 100%;
+						width: 100%;
+						background-color: rgba(0, 0, 0, 0.6);
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 16px;
+						color: white;
+						strong {
+							margin-left: 4px;
+							color: white;
+						}
+					}
+				}
+				.detail {
+					padding-top: 15px;
+					.brand {
+						font-size: 13px;
+						color: $placeholder;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+					}
+					.name {
+						font-size: 15px;
+						font-weight: 500;
+						margin-top: 3px;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+					}
+					.buttons {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						margin-top: 20px;
+						.ic-primary-button { padding: 0 30px; }
+						.share {
+							display: flex;
+							align-items: center;
+							list-style: none;
+							li {
+								&:not(:last-child) { margin-right: 10px; }
+								i {
+									font-size: 20px;
+									color: transparent;
+									cursor: pointer;
+									transition: $fast;
+								}
+								&:first-child i { -webkit-text-stroke: 1px $blue2; }
+								&:last-child i { -webkit-text-stroke: 1px $red; }
+								&:active i { transform: scale(0.95); }
+								@media (hover: hover){
+									&:first-child:hover i { color: $blue2; }
+									&:last-child:hover i { color: $red; }
+								}
+								
+							}
+						}
+					}
+				}
+				@media screen and (max-width: 1100px){
+					width: calc(100% / 2 - 10px);
+					margin-bottom: 20px;
+					&:not(:nth-child(2n)) { margin-right: 20px; }
+					&:nth-child(2n), &:last-child { margin-right: 0; }
+				}
+				@media screen and (max-width: 540px) {
+					width: 100%;
+					margin-right: 0 !important;
+					display: flex;
+					align-items: flex-start;
+					.image { width: 30%; }
+					.detail {
+						padding-top: 0;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						height: 100%;
+						width: 70%;
+						padding-left: 20px;
+					}
+				}
+				@media screen and (max-width: 440px) {
+					padding: 0;
+					overflow: hidden;
+					.image {
+						border-radius: 0;
+						height: 100%;
+						max-height: none;
+						position: relative;
+						img {
+							height: 100%;
+							width: auto;
+							position: absolute;
+						}
+					}
+					.detail {
+						padding: 15px;
+					}
+				}
+				@media screen and (max-width: 400px) {
+					.detail .buttons .ic-primary-button { padding: 0 15px; }
+				}
+			}
+			.ic-paginator { margin-top: 20px; }
+		}
+	}
+}

@@ -1,0 +1,88 @@
+@import '../styles/style.variable.scss';
+
+#login-page, #register-page {
+	min-height: 100vh;
+	background-image: url(../assets/images/background-login.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 100px 20px 20px;
+	#logo {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		width: 160px;
+		transition: $fast;
+		@media screen and (max-width: 440px) {
+			left: 20px;
+		}
+	}
+	#form-login, #form-register {
+		width: 100%;
+		max-width: 400px;
+		h1 {
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			font-weight: 500;
+			margin-bottom: 20px;
+		}
+		.mt { margin-top: 10px; }
+		.ic-dropdown:not(.focus) .placeholder { color: $textColor; }
+		.ic-textfield:not(.focus) .placeholder {
+			color: $textColor;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: calc(100% - 30px);
+			overflow: hidden;
+		}
+		.ic-textfield, .ic-dropdown {
+			border-color: transparent;
+		}
+		.ic-checkbox {
+			margin-top: 10px;
+			.far, .label { color: #fff; }
+			.label { font-weight: 300; }
+			&.on i { color: #fff; }
+		}
+		.ic-primary-button {
+			margin: 30px 0 20px 0;
+			box-shadow: $shadowButton;
+			display: block;
+		}
+		.helper {
+			color: rgba(255, 255, 255, 0.85);
+			font-size: 12px;
+			font-weight: 300;
+			text-align: center;
+			margin-bottom: 10px;
+			a {
+				color: #fff;
+				font-size: inherit;
+				text-decoration: none;
+				font-weight: 500;
+			}
+		}
+	}
+
+	#modal-tyc .content-modal, #modal-tratamiento .content-modal {
+		max-width: 800px;
+		.body-modal {
+			.subtitle {
+				font-weight: 500;
+				font-size: 14px;
+				margin-bottom: 10px;
+				&:not(:first-child) { margin-top: 30px; }
+			}
+			.text {
+				font-weight: 300;
+				line-height: 20px;
+				margin-bottom: 10px;
+			}
+			ul, ol { padding-left: 30px; }
+		}
+	}
+}
