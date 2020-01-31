@@ -65,18 +65,70 @@
 				background-color: $borderGray;
 			}
 		}
+		@media screen and (max-width: 1000px) {
+			.forms { margin-left: 20px; }
+		}
+		@media screen and (max-width: 880px) {
+			.menu-prefs { display: none; }
+			.forms {
+				margin-left: 0;
+				width: 100%;
+				[data-form] {
+					display: block;
+					border: 1px solid $borderGray;
+					border-radius: 10px;
+					&:not(:last-child) { margin-bottom: 15px; }
+					&:not(:first-child) h2 + div { display: none; }
+					h2 {
+						color: $gray;
+						font-size: 13px;
+						font-weight: 500;
+						padding: 15px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						margin-bottom: 0;
+						border-radius: 10px 10px 0 0;
+						.fas {
+							color: $gray;
+							margin-right: 5px;
+							display: block;
+						}
+						img { margin-right: 5px; }
+						& + div {
+							display: none;
+							border-top: 1px solid $borderGray;
+							padding: 20px;
+						}
+					}
+					&.open {
+						box-shadow: $boxShadow;
+						h2 {
+							background-color: $blue2;
+							color: white;
+							.fas { color: white; }
+							& + div { display: block; }
+						}
+					}
+				}
+			}
+		}
 	}
 	.forms {
 		width: calc(100% - 360px);
 		margin-left: 50px;
 		& > *:not(.form1) { display: none; }
+		[data-form] h2 {
+			i, img { display: none; }
+		}
 		.form1, .form3 {
 			h2 {
 				font-size: 18px;
 				font-weight: bold;
 				margin-bottom: 20px;
 			}
-			& > div:not(:last-child) { margin-bottom: 10px; }
+			& > div > div:not(:last-child) { margin-bottom: 10px; }
 			.mr { margin-right: 10px; }
 			.row1 {
 				display: flex;
@@ -103,6 +155,18 @@
 					margin-right: 10px;
 				}
 				.ic-secondary-button { padding: 0 30px; }
+			}
+			@media screen and (max-width: 630px) {
+				& > div > div:not(.buttons) {
+					flex-direction: column !important;
+					& > * {
+						width: 100% !important;
+					}
+					.mr {
+						margin-right: 0;
+						margin-bottom: 10px;
+					}
+				}
 			}
 		}
 		.form2 {
@@ -156,6 +220,14 @@
 							margin-right: 5px;
 						}
 					}
+				}
+				.buttons {
+					margin-top: 20px;
+					.ic-primary-button {
+						line-height: 50px;
+						margin-right: 10px;
+					}
+					.ic-secondary-button { padding: 0 30px; }
 				}
 			}
 		}
@@ -215,6 +287,10 @@
 						margin-bottom: 5px;
 					}
 					.ic-primary-button { margin-top: 15px; }
+				}
+				@media screen and (max-width: 640px) {
+					width: 100%;
+					margin-right: 0 !important;
 				}
 			}
 		}

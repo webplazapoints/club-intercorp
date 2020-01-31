@@ -40,372 +40,454 @@
 			</li>
 		</ul>
 		<div class="forms">
-			<div class="form1" data-form="1">
-				<h2>Mis datos</h2>
-				<div class="row1">
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Tipo de documento</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir un tipo</li>
-							<li class="ic-dropitem" data-value="0">DNI</li>
-							<li class="ic-dropitem" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
-							<li class="ic-dropitem" data-value="2">Pasaporte</li>
-							<li class="ic-dropitem" data-value="3">Permiso temporal de permanencia (PTP)</li>
-						</ul>
+			<div class="form1 open" data-form="1">
+				<h2><i class="fas fa-user" aria-hidden="true"></i>Mis datos</h2>
+				<div>
+					<div class="row1">
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Tipo de documento</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir un tipo</li>
+								<li class="ic-dropitem" data-value="0">DNI</li>
+								<li class="ic-dropitem" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
+								<li class="ic-dropitem" data-value="2">Pasaporte</li>
+								<li class="ic-dropitem" data-value="3">Permiso temporal de permanencia (PTP)</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option disabled selected value="">Elegir un tipo</option>
+								<option value="0">DNI</option>
+								<option value="1">Carnet de extranjer&iacute;a / C&eacute;dula</option>
+								<option value="2">Pasaporte</option>
+								<option value="3">Permiso temporal de permanencia (PTP)</option>
+							</select>
+						</div>
+						<label class="ic-textfield">
+							<span class="placeholder">N&deg; de documento</span>
+							<input type="text">
+						</label>
 					</div>
-					<label class="ic-textfield">
-						<span class="placeholder">N&deg; de documento</span>
-						<input type="text">
-					</label>
-				</div>
-				<div class="row2">
-					<label class="ic-textfield mr">
-						<span class="placeholder">Nombres y apellidos</span>
-						<input type="text">
-					</label>
-					<label class="ic-textfield">
-						<span class="placeholder">Fecha de nacimiento</span>
-						<input type="text">
-					</label>
-				</div>
-				<div class="row3">
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Sexo</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir tu g&eacute;nero</li>
-							<li class="ic-dropitem" data-value="0">Masculino</li>
-							<li class="ic-dropitem" data-value="1">Femenino</li>
-						</ul>
+					<div class="row2">
+						<label class="ic-textfield mr">
+							<span class="placeholder">Nombres y apellidos</span>
+							<input type="text">
+						</label>
+						<label class="ic-textfield">
+							<span class="placeholder">Fecha de nacimiento</span>
+							<input type="text">
+						</label>
 					</div>
-					<div class="ic-dropdown">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Estado civil</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir tu estado civil</li>
-							<li class="ic-dropitem" data-value="0">Soltero(a)</li>
-							<li class="ic-dropitem" data-value="1">Casado(a)</li>
-							<li class="ic-dropitem" data-value="2">Viudo(a)</li>
-							<li class="ic-dropitem" data-value="3">Divorciado(a)</li>
-						</ul>
+					<div class="row3">
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Sexo</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir tu g&eacute;nero</li>
+								<li class="ic-dropitem" data-value="0">Masculino</li>
+								<li class="ic-dropitem" data-value="1">Femenino</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Sexo</option>
+								<option value="0">Masculino</option>
+								<option value="1">Femenino</option>
+							</select>
+						</div>
+						<div class="ic-dropdown">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Estado civil</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir tu estado civil</li>
+								<li class="ic-dropitem" data-value="0">Soltero(a)</li>
+								<li class="ic-dropitem" data-value="1">Casado(a)</li>
+								<li class="ic-dropitem" data-value="2">Viudo(a)</li>
+								<li class="ic-dropitem" data-value="3">Divorciado(a)</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Estado civil</option>
+								<option value="0">Soltero(a)</option>
+								<option value="1">Casado(a)</option>
+								<option value="2">Viudo(a)</option>
+								<option value="3">Divorciado(a)</option>
+							</select>
+						</div>
 					</div>
-				</div>
-				<div class="row4">
-					<label class="ic-textfield mr">
-						<span class="placeholder">Correo electr&oacute;nico</span>
-						<input type="text">
-					</label>
-					<label class="ic-textfield">
-						<span class="placeholder">Nro. tel&eacute;fono</span>
-						<input type="text">
-					</label>
-				</div>
-				<div class="row5">
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Departamento</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir un departamento</li>
-							<li class="ic-dropitem" data-value="0">Lima</li>
-							<li class="ic-dropitem" data-value="1">Piura</li>
-						</ul>
+					<div class="row4">
+						<label class="ic-textfield mr">
+							<span class="placeholder">Correo electr&oacute;nico</span>
+							<input type="text">
+						</label>
+						<label class="ic-textfield">
+							<span class="placeholder">Nro. tel&eacute;fono</span>
+							<input type="text">
+						</label>
 					</div>
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Provincia</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir una provincia</li>
-							<li class="ic-dropitem" data-value="0">Lima</li>
-							<li class="ic-dropitem" data-value="1">Ca&ntilde;ete</li>
-						</ul>
+					<div class="row5">
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Departamento</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir un departamento</li>
+								<li class="ic-dropitem" data-value="0">Lima</li>
+								<li class="ic-dropitem" data-value="1">Piura</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Departamento</option>
+								<option value="0">Lima</option>
+								<option value="1">Piura</option>
+							</select>
+						</div>
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Provincia</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir una provincia</li>
+								<li class="ic-dropitem" data-value="0">Lima</li>
+								<li class="ic-dropitem" data-value="1">Ca&ntilde;ete</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Provincia</option>
+								<option value="0">Lima</option>
+								<option value="1">Ca&ntilde;ete</option>
+							</select>
+						</div>
+						<div class="ic-dropdown">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Distrito</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir un distrito</li>
+								<li class="ic-dropitem" data-value="0">Los Olivos</li>
+								<li class="ic-dropitem" data-value="1">San Isidro</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Distrito</option>
+								<option value="0">Los Olivos</option>
+								<option value="1">San Isidro</option>
+							</select>
+						</div>
 					</div>
-					<div class="ic-dropdown">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Distrito</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir un distrito</li>
-							<li class="ic-dropitem" data-value="0">Los Olivos</li>
-							<li class="ic-dropitem" data-value="1">San Isidro</li>
-						</ul>
+					<div class="buttons">
+						<button type="button" class="ic-primary-button">Guardar</button>
+						<button type="button" class="ic-secondary-button">Cancelar</button>
 					</div>
-				</div>
-				<div class="buttons">
-					<button type="button" class="ic-primary-button">Guardar</button>
-					<button type="button" class="ic-secondary-button">Cancelar</button>
 				</div>
 			</div>
 			<div class="form2" data-form="2">
-				<h2>Preferencias de contrase&ntilde;a y correo</h2>
-				<div class="tabs">
-					<span data-tab="password" class="active">Contrase&ntilde;a</span>
-					<span data-tab="email">Correo electr&oacute;nico</span>
-				</div>
-				<div class="form-tabs">
-					<div data-content="password">
-						<label class="ic-textfield">
-							<span class="placeholder">Antigua contrase&ntilde;a</span>
-							<input type="password">
-							<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
-						</label>
-						<label class="ic-textfield">
-							<span class="placeholder">Nueva contrase&ntilde;a</span>
-							<input type="password">
-							<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
-						</label>
-						<label class="ic-textfield">
-							<span class="placeholder">Confirmar nueva contrase&ntilde;a</span>
-							<input type="password">
-							<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
-						</label>
+				<h2><i class="fas fa-user-lock" aria-hidden="true"></i>Preferencias de contrase&ntilde;a y correo</h2>
+				<div>
+					<div class="tabs">
+						<span data-tab="password" class="active">Contrase&ntilde;a</span>
+						<span data-tab="email">Correo electr&oacute;nico</span>
 					</div>
-					<div data-content="email">
-						<p>Confirmaci&oacute;n de env&iacute;o de correo del Club Intercorp:</p>
-						<div class="ic-radio">
-							<label>
-								<input type="radio" name="confirm">
-								<i class="far fa-circle" aria-hidden="true"></i>
-								<span>S&iacute; enviar</span>
+					<div class="form-tabs">
+						<div data-content="password">
+							<label class="ic-textfield">
+								<span class="placeholder">Antigua contrase&ntilde;a</span>
+								<input type="password">
+								<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
 							</label>
-							<label>
-								<input type="radio" name="confirm">
-								<i class="far fa-circle" aria-hidden="true"></i>
-								<span>No enviar</span>
+							<label class="ic-textfield">
+								<span class="placeholder">Nueva contrase&ntilde;a</span>
+								<input type="password">
+								<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
 							</label>
+							<label class="ic-textfield">
+								<span class="placeholder">Confirmar nueva contrase&ntilde;a</span>
+								<input type="password">
+								<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
+							</label>
+							<div class="buttons">
+								<button type="button" class="ic-primary-button">Guardar</button>
+								<button type="button" class="ic-secondary-button">Cancelar</button>
+							</div>
 						</div>
-						<p>Frecuencia de env&iacute;os de correos del Club Intercorp:</p>
-						<div class="ic-radio">
-							<label>
-								<input type="radio" name="frec">
-								<i class="far fa-circle" aria-hidden="true"></i>
-								<span>3 veces a la semana</span>
-							</label>
-							<label>
-								<input type="radio" name="frec">
-								<i class="far fa-circle" aria-hidden="true"></i>
-								<span>2 veces a la semana</span>
-							</label>
-							<label>
-								<input type="radio" name="frec">
-								<i class="far fa-circle" aria-hidden="true"></i>
-								<span>1 vez a la semana</span>
-							</label>
+						<div data-content="email">
+							<p>Confirmaci&oacute;n de env&iacute;o de correo del Club Intercorp:</p>
+							<div class="ic-radio">
+								<label>
+									<input type="radio" name="confirm">
+									<i class="far fa-circle" aria-hidden="true"></i>
+									<span>S&iacute; enviar</span>
+								</label>
+								<label>
+									<input type="radio" name="confirm">
+									<i class="far fa-circle" aria-hidden="true"></i>
+									<span>No enviar</span>
+								</label>
+							</div>
+							<p>Frecuencia de env&iacute;os de correos del Club Intercorp:</p>
+							<div class="ic-radio">
+								<label>
+									<input type="radio" name="frec">
+									<i class="far fa-circle" aria-hidden="true"></i>
+									<span>3 veces a la semana</span>
+								</label>
+								<label>
+									<input type="radio" name="frec">
+									<i class="far fa-circle" aria-hidden="true"></i>
+									<span>2 veces a la semana</span>
+								</label>
+								<label>
+									<input type="radio" name="frec">
+									<i class="far fa-circle" aria-hidden="true"></i>
+									<span>1 vez a la semana</span>
+								</label>
+							</div>
+	
+							<button type="button" class="unsubscribe"><i class="fas fa-bell-slash" aria-hidden="true"></i>Desuscribirme</button>
 						</div>
-
-						<button type="button" class="unsubscribe"><i class="fas fa-bell-slash" aria-hidden="true"></i>Desuscribirme</button>
 					</div>
 				</div>
 			</div>
 			<div class="form3" data-form="3">
-				<h2>Mi c&oacute;nyuge</h2>
-				<div class="row1">
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Tipo de documento</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir un tipo</li>
-							<li class="ic-dropitem" data-value="0">DNI</li>
-							<li class="ic-dropitem" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
-							<li class="ic-dropitem" data-value="2">Pasaporte</li>
-							<li class="ic-dropitem" data-value="3">Permiso temporal de permanencia (PTP)</li>
-						</ul>
+				<h2><i class="fas fa-restroom" aria-hidden="true"></i>Mi c&oacute;nyuge</h2>
+				<div>
+					<div class="row1">
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Tipo de documento</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir un tipo</li>
+								<li class="ic-dropitem" data-value="0">DNI</li>
+								<li class="ic-dropitem" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
+								<li class="ic-dropitem" data-value="2">Pasaporte</li>
+								<li class="ic-dropitem" data-value="3">Permiso temporal de permanencia (PTP)</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option disabled selected value="">Elegir un tipo</option>
+								<option value="0">DNI</option>
+								<option value="1">Carnet de extranjer&iacute;a / C&eacute;dula</option>
+								<option value="2">Pasaporte</option>
+								<option value="3">Permiso temporal de permanencia (PTP)</option>
+							</select>
+						</div>
+						<label class="ic-textfield">
+							<span class="placeholder">N&deg; de documento</span>
+							<input type="text">
+						</label>
 					</div>
-					<label class="ic-textfield">
-						<span class="placeholder">N&deg; de documento</span>
-						<input type="text">
-					</label>
-				</div>
-				<div class="row2">
-					<label class="ic-textfield mr">
-						<span class="placeholder">Nombres y apellidos</span>
-						<input type="text">
-					</label>
-					<label class="ic-textfield">
-						<span class="placeholder">Fecha de nacimiento</span>
-						<input type="text">
-					</label>
-				</div>
-				<div class="row3">
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Sexo</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir tu g&eacute;nero</li>
-							<li class="ic-dropitem" data-value="0">Masculino</li>
-							<li class="ic-dropitem" data-value="1">Femenino</li>
-						</ul>
+					<div class="row2">
+						<label class="ic-textfield mr">
+							<span class="placeholder">Nombres y apellidos</span>
+							<input type="text">
+						</label>
+						<label class="ic-textfield">
+							<span class="placeholder">Fecha de nacimiento</span>
+							<input type="text">
+						</label>
 					</div>
-					<div class="ic-dropdown">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Estado civil</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir tu estado civil</li>
-							<li class="ic-dropitem" data-value="0">Soltero(a)</li>
-							<li class="ic-dropitem" data-value="1">Casado(a)</li>
-							<li class="ic-dropitem" data-value="2">Viudo(a)</li>
-							<li class="ic-dropitem" data-value="3">Divorciado(a)</li>
-						</ul>
+					<div class="row3">
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Sexo</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir tu g&eacute;nero</li>
+								<li class="ic-dropitem" data-value="0">Masculino</li>
+								<li class="ic-dropitem" data-value="1">Femenino</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Sexo</option>
+								<option value="0">Masculino</option>
+								<option value="1">Femenino</option>
+							</select>
+						</div>
+						<div class="ic-dropdown">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Estado civil</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir tu estado civil</li>
+								<li class="ic-dropitem" data-value="0">Soltero(a)</li>
+								<li class="ic-dropitem" data-value="1">Casado(a)</li>
+								<li class="ic-dropitem" data-value="2">Viudo(a)</li>
+								<li class="ic-dropitem" data-value="3">Divorciado(a)</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Estado civil</option>
+								<option value="0">Soltero(a)</option>
+								<option value="1">Casado(a)</option>
+								<option value="2">Viudo(a)</option>
+								<option value="3">Divorciado(a)</option>
+							</select>
+						</div>
 					</div>
-				</div>
-				<div class="row4">
-					<label class="ic-textfield mr">
-						<span class="placeholder">Correo electr&oacute;nico</span>
-						<input type="text">
-					</label>
-					<label class="ic-textfield">
-						<span class="placeholder">Nro. tel&eacute;fono</span>
-						<input type="text">
-					</label>
-				</div>
-				<div class="row5">
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Departamento</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir un departamento</li>
-							<li class="ic-dropitem" data-value="0">Lima</li>
-							<li class="ic-dropitem" data-value="1">Piura</li>
-						</ul>
+					<div class="row4">
+						<label class="ic-textfield mr">
+							<span class="placeholder">Correo electr&oacute;nico</span>
+							<input type="text">
+						</label>
+						<label class="ic-textfield">
+							<span class="placeholder">Nro. tel&eacute;fono</span>
+							<input type="text">
+						</label>
 					</div>
-					<div class="ic-dropdown mr">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Provincia</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir una provincia</li>
-							<li class="ic-dropitem" data-value="0">Lima</li>
-							<li class="ic-dropitem" data-value="1">Ca&ntilde;ete</li>
-						</ul>
+					<div class="row5">
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Departamento</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir un departamento</li>
+								<li class="ic-dropitem" data-value="0">Lima</li>
+								<li class="ic-dropitem" data-value="1">Piura</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Departamento</option>
+								<option value="0">Lima</option>
+								<option value="1">Piura</option>
+							</select>
+						</div>
+						<div class="ic-dropdown mr">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Provincia</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir una provincia</li>
+								<li class="ic-dropitem" data-value="0">Lima</li>
+								<li class="ic-dropitem" data-value="1">Ca&ntilde;ete</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Provincia</option>
+								<option value="0">Lima</option>
+								<option value="1">Ca&ntilde;ete</option>
+							</select>
+						</div>
+						<div class="ic-dropdown">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+							<span class="placeholder">Distrito</span>
+							<input type="text" readonly>
+							<input type="hidden">
+							<ul class="ic-droplist">
+								<li class="disabled">Elegir un distrito</li>
+								<li class="ic-dropitem" data-value="0">Los Olivos</li>
+								<li class="ic-dropitem" data-value="1">San Isidro</li>
+							</ul>
+							<select id="" class="ic-dropdown-mobile">
+								<option value="" disabled selected>Distrito</option>
+								<option value="0">Los Olivos</option>
+								<option value="1">San Isidro</option>
+							</select>
+						</div>
 					</div>
-					<div class="ic-dropdown">
-						<i class="fas fa-angle-down" aria-hidden="true"></i>
-						<span class="placeholder">Distrito</span>
-						<input type="text" readonly>
-						<input type="hidden">
-						<ul class="ic-droplist">
-							<li class="disabled">Elegir un distrito</li>
-							<li class="ic-dropitem" data-value="0">Los Olivos</li>
-							<li class="ic-dropitem" data-value="1">San Isidro</li>
-						</ul>
+					<div class="buttons">
+						<button type="button" class="ic-primary-button">Guardar</button>
+						<button type="button" class="ic-secondary-button">Cancelar</button>
 					</div>
-				</div>
-				<div class="buttons">
-					<button type="button" class="ic-primary-button">Guardar</button>
-					<button type="button" class="ic-secondary-button">Cancelar</button>
 				</div>
 			</div>
 			<div class="form4" data-form="4">
-				<h2>Consumos y ahorros</h2>
-				<p>Monto total de ahorro hist&oacute;rico con el Club Intercorp</p>
-				<label class="ic-textfield edited disabled">
-					<span class="placeholder">Ahorro hist&oacute;rico</span>
-					<input type="text" value="520.00">
-				</label>
+				<h2><i class="fas fa-dollar-sign" aria-hidden="true"></i>Consumos y ahorros</h2>
+				<div>
+					<p>Monto total de ahorro hist&oacute;rico con el Club Intercorp</p>
+					<label class="ic-textfield edited disabled">
+						<span class="placeholder">Ahorro hist&oacute;rico</span>
+						<input type="text" value="520.00">
+					</label>
+				</div>
 			</div>
 			<div class="form5" data-form="5">
-				<h2>Creciendo con Intercorp</h2>
-				<section class="job-list">
-					<article>
-						<img src="../assets/images/job1.png" alt="">
-						<div class="detail">
-							<p class="brand">Financiera oh!</p>
-							<p class="job">Jefe de producto y gesti&oacute;n de carrera</p>
-							<p class="publish">Publicado: 11/12/2019</p>
-							<p class="end">Vencimiento: 15/02/2020</p>
-							<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
-						</div>
-					</article>
-					<article>
-						<img src="../assets/images/job1.png" alt="">
-						<div class="detail">
-							<p class="brand">Financiera oh!</p>
-							<p class="job">Product Owner de E-Commerce</p>
-							<p class="publish">Publicado: 11/12/2019</p>
-							<p class="end">Vencimiento: 15/02/2020</p>
-							<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
-						</div>
-					</article>
-					<article>
-						<img src="../assets/images/job2.png" alt="">
-						<div class="detail">
-							<p class="brand">Cineplanet</p>
-							<p class="job">Analista de QA</p>
-							<p class="publish">Publicado: 11/12/2019</p>
-							<p class="end">Vencimiento: 15/02/2020</p>
-							<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
-						</div>
-					</article>
-					<article>
-						<img src="../assets/images/job3.png" alt="">
-						<div class="detail">
-							<p class="brand">Interbank</p>
-							<p class="job">Product Owner de E-Commerce</p>
-							<p class="publish">Publicado: 11/12/2019</p>
-							<p class="end">Vencimiento: 15/02/2020</p>
-							<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
-						</div>
-					</article>
-					<article>
-						<img src="../assets/images/job4.png" alt="">
-						<div class="detail">
-							<p class="brand">UTP | Universidad Tecnol&oacute;gica del Per&uacute;</p>
-							<p class="job">Asistente de Gestión y Desarrollo Humano - Huancayo</p>
-							<p class="publish">Publicado: 11/12/2019</p>
-							<p class="end">Vencimiento: 15/02/2020</p>
-							<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
-						</div>
-					</article>
-					<article>
-						<img src="../assets/images/job2.png" alt="">
-						<div class="detail">
-							<p class="brand">Cineplanet</p>
-							<p class="job">Analista de Gestión de Procesos</p>
-							<p class="publish">Publicado: 11/12/2019</p>
-							<p class="end">Vencimiento: 15/02/2020</p>
-							<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
-						</div>
-					</article>
-				</section>
-				<div class="ic-paginator">
-					<button type="button" data-page="prev" class="disabled">Anterior</button>
-					<select id="cboPaginator" class="ic-paginator-mobile">
-						<option value="1">P&aacute;gina 1</option>
-						<option value="2">P&aacute;gina 2</option>
-						<option value="3">P&aacute;gina 3</option>
-						<option value="4">P&aacute;gina 4</option>
-						<option value="5">P&aacute;gina 5</option>
-					</select>
-					<button type="button" data-page="1" class="active">1</button>
-					<button type="button" data-page="2">2</button>
-					<button type="button" data-page="3">3</button>
-					<button type="button" data-page="4">4</button>
-					<button type="button" data-page="5">5</button>
-					<button type="button" data-page="next">Siguiente</button>
+				<h2><i class="fas fa-briefcase" aria-hidden="true"></i>Creciendo con Intercorp</h2>
+				<div>
+					<section class="job-list">
+						<article>
+							<img src="../assets/images/job1.png" alt="">
+							<div class="detail">
+								<p class="brand">Financiera oh!</p>
+								<p class="job">Jefe de producto y gesti&oacute;n de carrera</p>
+								<p class="publish">Publicado: 11/12/2019</p>
+								<p class="end">Vencimiento: 15/02/2020</p>
+								<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
+							</div>
+						</article>
+						<article>
+							<img src="../assets/images/job1.png" alt="">
+							<div class="detail">
+								<p class="brand">Financiera oh!</p>
+								<p class="job">Product Owner de E-Commerce</p>
+								<p class="publish">Publicado: 11/12/2019</p>
+								<p class="end">Vencimiento: 15/02/2020</p>
+								<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
+							</div>
+						</article>
+						<article>
+							<img src="../assets/images/job2.png" alt="">
+							<div class="detail">
+								<p class="brand">Cineplanet</p>
+								<p class="job">Analista de QA</p>
+								<p class="publish">Publicado: 11/12/2019</p>
+								<p class="end">Vencimiento: 15/02/2020</p>
+								<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
+							</div>
+						</article>
+						<article>
+							<img src="../assets/images/job3.png" alt="">
+							<div class="detail">
+								<p class="brand">Interbank</p>
+								<p class="job">Product Owner de E-Commerce</p>
+								<p class="publish">Publicado: 11/12/2019</p>
+								<p class="end">Vencimiento: 15/02/2020</p>
+								<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
+							</div>
+						</article>
+						<article>
+							<img src="../assets/images/job4.png" alt="">
+							<div class="detail">
+								<p class="brand">UTP | Universidad Tecnol&oacute;gica del Per&uacute;</p>
+								<p class="job">Asistente de Gestión y Desarrollo Humano - Huancayo</p>
+								<p class="publish">Publicado: 11/12/2019</p>
+								<p class="end">Vencimiento: 15/02/2020</p>
+								<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
+							</div>
+						</article>
+						<article>
+							<img src="../assets/images/job2.png" alt="">
+							<div class="detail">
+								<p class="brand">Cineplanet</p>
+								<p class="job">Analista de Gestión de Procesos</p>
+								<p class="publish">Publicado: 11/12/2019</p>
+								<p class="end">Vencimiento: 15/02/2020</p>
+								<a href="javascript:void(0)" class="ic-primary-button">Ver oferta</a>
+							</div>
+						</article>
+					</section>
+					<div class="ic-paginator">
+						<button type="button" data-page="prev" class="disabled">Anterior</button>
+						<select id="cboPaginator" class="ic-paginator-mobile">
+							<option value="1">P&aacute;gina 1</option>
+							<option value="2">P&aacute;gina 2</option>
+							<option value="3">P&aacute;gina 3</option>
+							<option value="4">P&aacute;gina 4</option>
+							<option value="5">P&aacute;gina 5</option>
+						</select>
+						<button type="button" data-page="1" class="active">1</button>
+						<button type="button" data-page="2">2</button>
+						<button type="button" data-page="3">3</button>
+						<button type="button" data-page="4">4</button>
+						<button type="button" data-page="5">5</button>
+						<button type="button" data-page="next">Siguiente</button>
+					</div>
 				</div>
 			</div>
 			<div class="form6" data-form="6">
-				<h2>Zona Interbank</h2>
+				<h2><img src="../assets/images/icon-interbank.png" alt="">Zona Interbank</h2>
 				<div class="ic-accordeon">
 					<div class="group">
 						<p class="accordeon-button">&iquest;Qu&eacute; necesito para solicitar un pr&eacute;stamo como colaborador?<i class="fas fa-angle-down" aria-hidden="true"></i></p>

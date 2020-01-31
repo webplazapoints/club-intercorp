@@ -119,6 +119,9 @@ html, body {
   .ic-dropdown > *:not(.ic-dropdown-mobile) {
     display: none;
   }
+  .ic-dropdown .ic-droplist {
+    display: none !important;
+  }
   .ic-dropdown .ic-dropdown-mobile {
     display: inline-block;
     width: 100%;
@@ -291,6 +294,7 @@ html, body {
   appearance: none;
   transition: 0.2s;
   font-size: 12px;
+  cursor: pointer;
 }
 @media (hover: hover) {
   .ic-secondary-button:hover {
@@ -560,6 +564,11 @@ html, body {
 .ic-accordeon .group .accordeon-content table tr td {
   font-size: 13px;
   padding: 15px;
+}
+@media screen and (max-width: 640px) {
+  .ic-accordeon .group .accordeon-content table {
+    width: 100%;
+  }
 }
 .ic-accordeon .group.active {
   border-color: #1A8EAD;

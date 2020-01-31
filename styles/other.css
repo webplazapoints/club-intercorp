@@ -69,6 +69,69 @@
   width: 100%;
   background-color: #EAEAEA;
 }
+@media screen and (max-width: 1000px) {
+  #preferences-page .content .forms {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 880px) {
+  #preferences-page .content .menu-prefs {
+    display: none;
+  }
+  #preferences-page .content .forms {
+    margin-left: 0;
+    width: 100%;
+  }
+  #preferences-page .content .forms [data-form] {
+    display: block;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+  }
+  #preferences-page .content .forms [data-form]:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  #preferences-page .content .forms [data-form]:not(:first-child) h2 + div {
+    display: none;
+  }
+  #preferences-page .content .forms [data-form] h2 {
+    color: #a9a9a9;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  #preferences-page .content .forms [data-form] h2 .fas {
+    color: #a9a9a9;
+    margin-right: 5px;
+    display: block;
+  }
+  #preferences-page .content .forms [data-form] h2 img {
+    margin-right: 5px;
+  }
+  #preferences-page .content .forms [data-form] h2 + div {
+    display: none;
+    border-top: 1px solid #EAEAEA;
+    padding: 20px;
+  }
+  #preferences-page .content .forms [data-form].open {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+  }
+  #preferences-page .content .forms [data-form].open h2 {
+    background-color: #1A8EAD;
+    color: white;
+  }
+  #preferences-page .content .forms [data-form].open h2 .fas {
+    color: white;
+  }
+  #preferences-page .content .forms [data-form].open h2 + div {
+    display: block;
+  }
+}
 #preferences-page .forms {
   width: calc(100% - 360px);
   margin-left: 50px;
@@ -76,12 +139,15 @@
 #preferences-page .forms > *:not(.form1) {
   display: none;
 }
+#preferences-page .forms [data-form] h2 i, #preferences-page .forms [data-form] h2 img {
+  display: none;
+}
 #preferences-page .forms .form1 h2, #preferences-page .forms .form3 h2 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-#preferences-page .forms .form1 > div:not(:last-child), #preferences-page .forms .form3 > div:not(:last-child) {
+#preferences-page .forms .form1 > div > div:not(:last-child), #preferences-page .forms .form3 > div > div:not(:last-child) {
   margin-bottom: 10px;
 }
 #preferences-page .forms .form1 .mr, #preferences-page .forms .form3 .mr {
@@ -126,6 +192,18 @@
 }
 #preferences-page .forms .form1 .buttons .ic-secondary-button, #preferences-page .forms .form3 .buttons .ic-secondary-button {
   padding: 0 30px;
+}
+@media screen and (max-width: 630px) {
+  #preferences-page .forms .form1 > div > div:not(.buttons), #preferences-page .forms .form3 > div > div:not(.buttons) {
+    flex-direction: column !important;
+  }
+  #preferences-page .forms .form1 > div > div:not(.buttons) > *, #preferences-page .forms .form3 > div > div:not(.buttons) > * {
+    width: 100% !important;
+  }
+  #preferences-page .forms .form1 > div > div:not(.buttons) .mr, #preferences-page .forms .form3 > div > div:not(.buttons) .mr {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 #preferences-page .forms .form2 h2 {
   font-size: 18px;
@@ -180,6 +258,16 @@
 #preferences-page .forms .form2 .form-tabs [data-content=email] .unsubscribe .fas {
   color: #D82323;
   margin-right: 5px;
+}
+#preferences-page .forms .form2 .form-tabs .buttons {
+  margin-top: 20px;
+}
+#preferences-page .forms .form2 .form-tabs .buttons .ic-primary-button {
+  line-height: 50px;
+  margin-right: 10px;
+}
+#preferences-page .forms .form2 .form-tabs .buttons .ic-secondary-button {
+  padding: 0 30px;
 }
 #preferences-page .forms .form4 h2 {
   font-size: 18px;
@@ -237,6 +325,12 @@
 }
 #preferences-page .form5 .job-list article .detail .ic-primary-button {
   margin-top: 15px;
+}
+@media screen and (max-width: 640px) {
+  #preferences-page .form5 .job-list article {
+    width: 100%;
+    margin-right: 0 !important;
+  }
 }
 #preferences-page .form5 .ic-paginator {
   margin-top: 30px;
