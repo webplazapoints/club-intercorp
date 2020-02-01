@@ -5,6 +5,7 @@ $(function () {
 	icCheckbox();
 	icRadio();
 	icAccordeon();
+	showContact();
 });
 
 function readLayout() {
@@ -83,21 +84,21 @@ function icDropdown() {
 }
 
 function icTextfield() {
-	$('.ic-textfield input:text, .ic-textfield input:password').focusin(function (ev) {
+	$('.ic-textfield input:text, .ic-textfield input:password, .ic-textarea textarea').focusin(function (ev) {
 		var t = $(ev.target);
-		t.closest('.ic-textfield').addClass('focus');
+		t.closest('.ic-textfield, .ic-textarea').addClass('focus');
 	});
 
-	$('.ic-textfield input:text, .ic-textfield input:password').focusout(function (ev) {
+	$('.ic-textfield input:text, .ic-textfield input:password, .ic-textarea textarea').focusout(function (ev) {
 		var t = $(ev.target);
-		t.closest('.ic-textfield').removeClass('focus');
+		t.closest('.ic-textfield, .ic-textarea').removeClass('focus');
 	});
 
-	$('.ic-textfield input:text, .ic-textfield input:password').on('input', function (ev) {
+	$('.ic-textfield input:text, .ic-textfield input:password, .ic-textarea textarea').on('input', function (ev) {
 		var t = $(ev.target);
 		var edited = t.val() != '' ? true : false;
-		if (edited) { t.closest('.ic-textfield').addClass('edited'); }
-		else { t.closest('.ic-textfield').removeClass('edited'); }
+		if (edited) { t.closest('.ic-textfield, .ic-textarea').addClass('edited'); }
+		else { t.closest('.ic-textfield, .ic-textarea').removeClass('edited'); }
 	});
 
 	$('.ic-textfield .show-password').click(function (ev) {
@@ -251,4 +252,8 @@ function icAccordeon(){
 		t.siblings('.accordeon-content').slideDown('fast');
 		t.parent('.group').addClass('active').siblings('.group').removeClass('active');
 	});
+}
+
+function showContact(){
+	icModal('#modal-contact', 'show');
 }

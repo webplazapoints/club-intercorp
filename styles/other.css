@@ -341,4 +341,120 @@
   margin-bottom: 20px;
 }
 
+#que-es-page {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+#que-es-page .back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0039A6;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#que-es-page .back .fas {
+  color: #0039A6;
+  margin-right: 5px;
+}
+#que-es-page h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#que-es-page p {
+  font-size: 13px;
+  text-align: center;
+}
+#que-es-page iframe {
+  width: 100%;
+  max-width: 740px;
+  display: block;
+  height: 430px;
+  border: none;
+  margin: 20px auto;
+}
+#que-es-page .ic-primary-button {
+  margin: 20px auto;
+  display: block;
+  width: max-content;
+}
+
+#tyc-page {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+#tyc-page .back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0039A6;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#tyc-page .back .fas {
+  color: #0039A6;
+  margin-right: 5px;
+}
+#tyc-page h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#tyc-page .subtitle {
+  color: #1A8EAD;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#tyc-page p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+#tyc-page p.list {
+  padding-left: 15px;
+}
+#tyc-page ul.alpha {
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+#tyc-page ul.alpha li {
+  list-style: upper-alpha;
+  font-size: 13px;
+}
+#tyc-page ul {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+#faq-page {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+#faq-page .back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0039A6;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#faq-page .back .fas {
+  color: #0039A6;
+  margin-right: 5px;
+}
+#faq-page h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#faq-page .ic-inline-link {
+  font-size: inherit;
+}
+
 /*# sourceMappingURL=other.css.map */

@@ -410,6 +410,18 @@ footer .copy {
     display: block;
   }
 }
+footer #modal-contact .content-modal {
+  max-width: 500px;
+}
+footer #modal-contact .content-modal .body-modal > p {
+  margin-bottom: 10px;
+}
+footer #modal-contact .content-modal .body-modal .buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
+}
 
 #home-page #banner {
   position: relative;

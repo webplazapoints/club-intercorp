@@ -162,7 +162,7 @@ html, body {
   pointer-events: none;
   transition: 0.2s;
 }
-.ic-textfield input[type=text], .ic-textfield input[type=password] {
+.ic-textfield input[type=text], .ic-textfield input[type=password], .ic-textfield textarea {
   border: none;
   padding: 0 15px;
   width: 100%;
@@ -172,6 +172,10 @@ html, body {
   font-size: 14px;
   font-weight: 500;
   margin-top: 24px;
+}
+.ic-textfield textarea {
+  resize: none;
+  height: 120px;
 }
 .ic-textfield .show-password {
   position: absolute;
@@ -188,6 +192,60 @@ html, body {
   color: #0039A6;
 }
 .ic-textfield.disabled {
+  cursor: default;
+  pointer-events: none;
+  background-color: #F5F5F5;
+}
+
+.ic-textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #EAEAEA;
+  height: 120px;
+  border-radius: 10px;
+}
+.ic-textarea:not(.disabled) {
+  cursor: text;
+}
+.ic-textarea .placeholder {
+  font-size: 13px;
+  color: #B5B5B5;
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.ic-textarea textarea {
+  border: none;
+  padding: 0 15px;
+  width: 100%;
+  outline: none;
+  background: transparent;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 24px;
+  resize: none;
+  height: 80px;
+}
+.ic-textarea .show-password {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  cursor: pointer;
+}
+.ic-textarea .show-password:active {
+  transform: scale(0.95);
+}
+.ic-textarea.focus .placeholder, .ic-textarea.edited .placeholder {
+  font-size: 10px;
+  top: 10px;
+  color: #0039A6;
+}
+.ic-textarea.disabled {
   cursor: default;
   pointer-events: none;
   background-color: #F5F5F5;

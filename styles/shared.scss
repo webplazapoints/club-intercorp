@@ -146,7 +146,7 @@ html, body {
 		pointer-events: none;
 		transition: $fast;
 	}
-	input[type="text"], input[type="password"] {
+	input[type="text"], input[type="password"], textarea {
 		border: none;
 		padding: 0 15px;
 		width: 100%;
@@ -156,6 +156,62 @@ html, body {
 		font-size: 14px;
 		font-weight: 500;
 		margin-top: 24px;
+	}
+	textarea {
+		resize: none;
+		height: 120px;
+	}
+	.show-password {
+		position: absolute;
+		right: 15px;
+		top: 18px;
+		cursor: pointer;
+		&:active { transform: scale(0.95); }
+	}
+	&.focus, &.edited {
+		.placeholder {
+			font-size: 10px;
+			top: 10px;
+			color: $blue;
+		}
+	}
+	&.disabled {
+		cursor: default;
+		pointer-events: none;
+		background-color: $whiteHover;
+	}
+}
+
+.ic-textarea {
+	position: relative;
+	display: block;
+	width: 100%;
+	background-color: $whiteOpacity;
+	border: 1px solid $borderGray;
+	height: 120px;
+	border-radius: 10px;
+	&:not(.disabled) { cursor: text; }
+	.placeholder {
+		font-size: 13px;
+		color: $placeholder;
+		position: absolute;
+		top: 17px;
+		left: 15px;
+		pointer-events: none;
+		transition: $fast;
+	}
+	textarea {
+		border: none;
+		padding: 0 15px;
+		width: 100%;
+		outline: none;
+		background: transparent;
+		padding: 0 15px;
+		font-size: 14px;
+		font-weight: 500;
+		margin-top: 24px;
+		resize: none;
+		height: 80px;
 	}
 	.show-password {
 		position: absolute;
