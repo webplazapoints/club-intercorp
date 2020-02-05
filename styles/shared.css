@@ -39,13 +39,27 @@ html, body {
   position: relative;
   display: block;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #EAEAEA;
-  height: 50px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .ic-dropdown:not(.disabled) {
   cursor: pointer;
+}
+.ic-dropdown.error input[type=text] {
+  border-color: #D82323;
+}
+.ic-dropdown.error.focused input[type=text] {
+  box-shadow: inset 0px 0px 0px 0.5px #D82323;
+}
+.ic-dropdown.error .placeholder {
+  color: #D82323;
+}
+.ic-dropdown.error .label-error {
+  color: #D82323;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 8px 5px 0 5px;
+  display: block;
+  line-height: 12px;
 }
 .ic-dropdown .fas {
   position: absolute;
@@ -55,26 +69,30 @@ html, body {
   pointer-events: none;
   opacity: 0.7;
 }
-.ic-dropdown .placeholder {
-  font-size: 13px;
-  color: #B5B5B5;
-  position: absolute;
-  top: 18px;
-  left: 15px;
-  pointer-events: none;
-  transition: 0.2s;
-}
 .ic-dropdown input[type=text] {
-  border: none;
-  padding: 0 15px;
+  line-height: 32px;
+  border: 1px solid #EAEAEA;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 16px 15px 0 15px;
+  font-size: 14px;
   width: 100%;
   outline: none;
-  background: transparent;
-  padding: 0 15px;
-  font-size: 14px;
   font-weight: 500;
-  margin-top: 24px;
+  transition: 0.2s;
+  -webkit-appearance: none;
   cursor: pointer;
+}
+.ic-dropdown .placeholder {
+  font-size: 13px;
+  color: #a9a9a9;
+  display: block;
+  transition: 0.2s;
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  width: max-content;
+  pointer-events: none;
 }
 .ic-dropdown .ic-droplist {
   display: none;
@@ -112,66 +130,34 @@ html, body {
   top: 10px;
   color: #0039A6;
 }
-.ic-dropdown .ic-dropdown-mobile {
-  display: none;
-}
-@media screen and (max-width: 600px) {
-  .ic-dropdown > *:not(.ic-dropdown-mobile) {
-    display: none;
-  }
-  .ic-dropdown .ic-droplist {
-    display: none !important;
-  }
-  .ic-dropdown .ic-dropdown-mobile {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    font-size: 12px;
-    -webkit-appearance: none;
-    outline: none;
-    user-select: none;
-    border: none;
-    padding: 0 25px 0 10px;
-    background-color: transparent;
-    background-image: url(../assets/images/icon-arrow.png);
-    background-repeat: no-repeat;
-    background-size: 10px;
-    background-position-x: calc(100% - 10px);
-    background-position-y: center;
-  }
-}
-
 .ic-textfield {
   position: relative;
-  display: block;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #EAEAEA;
-  height: 50px;
-  border-radius: 10px;
+  display: block;
 }
-.ic-textfield:not(.disabled) {
-  cursor: text;
+.ic-textfield input[type=text], .ic-textfield input[type=password] {
+  line-height: 32px;
+  border: 1px solid #EAEAEA;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 16px 15px 0 15px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  font-weight: 500;
+  transition: 0.2s;
+  -webkit-appearance: none;
 }
 .ic-textfield .placeholder {
   font-size: 13px;
-  color: #B5B5B5;
-  position: absolute;
-  top: 17px;
-  left: 15px;
-  pointer-events: none;
+  color: #a9a9a9;
+  display: block;
   transition: 0.2s;
-}
-.ic-textfield input[type=text], .ic-textfield input[type=password], .ic-textfield textarea {
-  border: none;
-  padding: 0 15px;
-  width: 100%;
-  outline: none;
-  background: transparent;
-  padding: 0 15px;
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 24px;
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  width: max-content;
+  pointer-events: none;
 }
 .ic-textfield textarea {
   resize: none;
@@ -188,13 +174,30 @@ html, body {
 }
 .ic-textfield.focus .placeholder, .ic-textfield.edited .placeholder {
   font-size: 10px;
-  top: 10px;
+  top: 9px;
   color: #0039A6;
 }
 .ic-textfield.disabled {
   cursor: default;
   pointer-events: none;
   background-color: #F5F5F5;
+}
+.ic-textfield.error input[type=text] {
+  border-color: #D82323;
+}
+.ic-textfield.error.focused input[type=text] {
+  box-shadow: inset 0px 0px 0px 0.5px #D82323;
+}
+.ic-textfield.error .placeholder {
+  color: #D82323;
+}
+.ic-textfield.error .label-error {
+  color: #D82323;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 8px 5px 0 5px;
+  display: block;
+  line-height: 12px;
 }
 
 .ic-textarea {
@@ -307,6 +310,7 @@ html, body {
 .ic-primary-button {
   display: inline-block;
   line-height: 40px;
+  min-height: 40px;
   outline: none;
   border: none;
   background-color: #0039A6;
@@ -324,6 +328,9 @@ html, body {
   font-size: 12px;
   color: white;
   pointer-events: none;
+}
+.ic-primary-button .ic-button-loader {
+  margin: 0 20px;
 }
 .ic-primary-button:active {
   transform: scale(0.95);

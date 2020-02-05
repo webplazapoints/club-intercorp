@@ -74,21 +74,32 @@
 					<li class="ic-dropitem" data-value="2">Tengo problemas con la configuraci&oacute;n de mi cuenta</li>
 					<li class="ic-dropitem" data-value="3">Otro</li>
 				</ul>
-				<select id="" class="ic-dropdown-mobile">
+				<!-- <select id="" class="ic-dropdown-mobile">
 					<option disabled selected value="">Elige un asunto</option>
 					<option value="0">Tengo problemas con el acceso a mi cuenta</option>
 					<option value="1">No puedo utilizar un beneficio</option>
 					<option value="2">Tengo problemas con la configuraci&oacute;n de mi cuenta</option>
 					<option value="3">Otro</option>
-				</select>
+				</select> -->
 			</div>
 			<label class="ic-textarea">
 				<span class="placeholder">Comentario</span>
 				<textarea></textarea>
 			</label>
 			<div class="buttons">
-				<button type="button" class="ic-primary-button">Enviar</button>
+				<button type="button" class="ic-primary-button" onclick="submitEnviar(this)">
+					<span>Enviar</span>
+					<div class="ic-button-loader"><div></div><div></div><div></div><div></div></div>
+				</button>
 			</div>
+		</div>
+	</div>
+	<div class="content-modal success-send">
+		<div class="body-modal">
+			<img src="../assets/images/success-send.png" alt="">
+			<p class="title">Cup&oacute;n generado</p>
+			<p>Tu cup&oacute;n ha sido generado con &eacute;xito, lo encontrar&aacute;s en la zona de <a class="ic-inline-link" href="javascript:void(0)">tus beneficios</a>. Aseg&uacute;rate de utilizarlo antes de la fecha de expiraci&oacute;n.</p>
+			<button class="ic-primary-button ok" type="button">Entendido</button>
 		</div>
 	</div>
 </div>

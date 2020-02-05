@@ -28,7 +28,7 @@
   margin-top: 20px;
 }
 #locations-page .search .ic-textfield {
-  margin-right: 10px;
+  margin: 0 10px;
 }
 #locations-page .map {
   position: relative;

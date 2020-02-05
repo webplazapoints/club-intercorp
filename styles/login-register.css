@@ -38,14 +38,19 @@
 #login-page #form-login .ic-dropdown:not(.focus) .placeholder, #login-page #form-register .ic-dropdown:not(.focus) .placeholder, #register-page #form-login .ic-dropdown:not(.focus) .placeholder, #register-page #form-register .ic-dropdown:not(.focus) .placeholder {
   color: #484848;
 }
-#login-page #form-login .ic-textfield:not(.focus) .placeholder, #login-page #form-register .ic-textfield:not(.focus) .placeholder, #register-page #form-login .ic-textfield:not(.focus) .placeholder, #register-page #form-register .ic-textfield:not(.focus) .placeholder {
-  color: #484848;
+#login-page #form-login .ic-textfield .placeholder, #login-page #form-register .ic-textfield .placeholder, #register-page #form-login .ic-textfield .placeholder, #register-page #form-register .ic-textfield .placeholder {
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: calc(100% - 30px);
+  max-width: calc(100vw - 70px);
   overflow: hidden;
 }
-#login-page #form-login .ic-textfield, #login-page #form-login .ic-dropdown, #login-page #form-register .ic-textfield, #login-page #form-register .ic-dropdown, #register-page #form-login .ic-textfield, #register-page #form-login .ic-dropdown, #register-page #form-register .ic-textfield, #register-page #form-register .ic-dropdown {
+#login-page #form-login .ic-textfield.error .label-error, #login-page #form-register .ic-textfield.error .label-error, #register-page #form-login .ic-textfield.error .label-error, #register-page #form-register .ic-textfield.error .label-error {
+  color: #fb8686;
+}
+#login-page #form-login .ic-textfield:not(.focus):not(.error) .placeholder, #login-page #form-register .ic-textfield:not(.focus):not(.error) .placeholder, #register-page #form-login .ic-textfield:not(.focus):not(.error) .placeholder, #register-page #form-register .ic-textfield:not(.focus):not(.error) .placeholder {
+  color: #484848;
+}
+#login-page #form-login .ic-textfield input[type=text], #login-page #form-login .ic-textfield input[type=password], #login-page #form-login .ic-dropdown input[type=text], #login-page #form-register .ic-textfield input[type=text], #login-page #form-register .ic-textfield input[type=password], #login-page #form-register .ic-dropdown input[type=text], #register-page #form-login .ic-textfield input[type=text], #register-page #form-login .ic-textfield input[type=password], #register-page #form-login .ic-dropdown input[type=text], #register-page #form-register .ic-textfield input[type=text], #register-page #form-register .ic-textfield input[type=password], #register-page #form-register .ic-dropdown input[type=text] {
   border-color: transparent;
 }
 #login-page #form-login .ic-checkbox, #login-page #form-register .ic-checkbox, #register-page #form-login .ic-checkbox, #register-page #form-register .ic-checkbox {

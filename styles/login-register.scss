@@ -32,14 +32,17 @@
 		}
 		.mt { margin-top: 10px; }
 		.ic-dropdown:not(.focus) .placeholder { color: $textColor; }
-		.ic-textfield:not(.focus) .placeholder {
-			color: $textColor;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			width: calc(100% - 30px);
-			overflow: hidden;
+		.ic-textfield {
+			.placeholder {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				max-width: calc(100vw - 70px);
+				overflow: hidden;
+			}
+			&.error .label-error { color: #fb8686; }
 		}
-		.ic-textfield, .ic-dropdown {
+		.ic-textfield:not(.focus):not(.error) .placeholder { color: $textColor; }
+		.ic-textfield input[type="text"], .ic-textfield input[type="password"], .ic-dropdown input[type="text"] {	
 			border-color: transparent;
 		}
 		.ic-checkbox {
