@@ -1,79 +1,105 @@
-<div class="navigation">
-	<i class="burguer-menu fas fa-bars" aria-hidden="true"></i>
-	<img id="logo" src="../assets/images/logo-intercorp.jpg" alt="Club Intercorp">
-	<label class="ic-textfield">
-		<i class="fas fa-search prefix-icon" aria-hidden="true"></i>
-		<span class="placeholder">Buscar beneficios</span>
-		<input type="text">
-	</label>
-	<ul class="menu">
-		<li class="home">
-			<a href="../views/home.html">
-				<i class="fas fa-home" aria-hidden="true"></i>
-				<span>Home</span>
-			</a>
-		</li>
-		<li class="benefits">
-			<a href="../views/benefits.html">
-				<i class="fas fa-gift" aria-hidden="true"></i>
-				<span>Beneficios</span>
-			</a>
-		</li>
-		<li class="coupons">
-			<a href="../views/coupons.html">
-				<i class="fas fa-tag" aria-hidden=""></i>
-				<span>Mis cupones</span>
-			</a>
-		</li>
-		<li class="location">
-			<a href="../views/locations.html">
-				<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-				<span>Establecimientos</span>
-			</a>
-		</li>
-	</ul>
-</div>
-<div class="social">
-	<ul class="social-media">
-		<li><a href="javascript:void(0)"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-		<li><a href="javascript:void(0)"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-		<li><a href="javascript:void(0)"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-		<li><a href="javascript:void(0)"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-	</ul>
-	<i class="fas fa-search mb-icon-search" aria-hidden="true"></i>
-	<div class="user">
-		<span class="initials">GS</span>
-		<i class="fas fa-angle-down" aria-hidden="true"></i>
-		<div class="user-dropdown">
-			<p class="hi">Hola, Gonzalo Salas</p>
-			<p class="email">gonzalo.salas@gmail.com</p>
-			<ul class="options">
-				<li>
-					<a href="../views/preferences.html">
-						<i class="fas fa-cog" aria-hidden="true"></i>
-						<span>Configuraci&oacute;n y preferencias</span>
-					</a>
-				</li>
-				<li>
-					<a href="../views/coupons.html">
-						<i class="fas fa-tag" aria-hidden="true"></i>
-						<span>Mis cupones</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:void(0)" onclick="showContact()">
-						<i class="fas fa-envelope" aria-hidden="true"></i>
-						<span>Cont&aacute;ctanos</span>
-					</a>
-				</li>
-				<li class="exit">
-					<a href="../index.html">
-						<i class="fas fa-sign-out-alt" aria-hidden="true"></i>
-						<span>Cerrar sesi&oacute;n</span>
-					</a>
-				</li>
-			</ul>
+<div class="row">
+	<div class="navigation">
+		<!-- <i class="burguer-menu fas fa-bars" aria-hidden="true"></i> -->
+		<img id="logo" src="../assets/images/logo-intercorp.jpg" alt="Club Intercorp">
+		<label class="ic-textfield">
+			<i class="fas fa-search prefix-icon" aria-hidden="true"></i>
+			<span class="placeholder">Buscar beneficios</span>
+			<input type="text">
+		</label>
+		<ul class="menu">
+			<li class="home">
+				<a href="../views/home.html">
+					<i class="fas fa-home" aria-hidden="true"></i>
+					<span>Home</span>
+				</a>
+			</li>
+			<li class="benefits">
+				<a href="../views/benefits.html">
+					<i class="fas fa-gift" aria-hidden="true"></i>
+					<span>Beneficios</span>
+				</a>
+			</li>
+			<li class="coupons">
+				<a href="../views/coupons.html">
+					<i class="fas fa-tag" aria-hidden=""></i>
+					<span>Mis cupones</span>
+				</a>
+			</li>
+			<li class="location">
+				<a href="../views/locations.html">
+					<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+					<span>Establecimientos</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="social">
+		<ul class="social-media">
+			<li><a href="javascript:void(0)"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+			<li><a href="javascript:void(0)"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+			<li><a href="javascript:void(0)"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+			<li><a href="javascript:void(0)"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		</ul>
+		<i class="fas fa-search mb-icon-search" onclick="showSearcherMobile()" aria-hidden="true"></i>
+		<div class="user">
+			<span class="initials">GS</span>
+			<i class="fas fa-angle-down" aria-hidden="true"></i>
+			<div class="user-dropdown">
+				<p class="hi">Hola, Gonzalo Salas</p>
+				<p class="email">gonzalo.salas@gmail.com</p>
+				<ul class="options">
+					<li>
+						<a href="../views/preferences.html">
+							<i class="fas fa-cog" aria-hidden="true"></i>
+							<span>Configuraci&oacute;n y preferencias</span>
+						</a>
+					</li>
+					<li>
+						<a href="../views/coupons.html">
+							<i class="fas fa-tag" aria-hidden="true"></i>
+							<span>Mis cupones</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="showContact()">
+							<i class="fas fa-envelope" aria-hidden="true"></i>
+							<span>Cont&aacute;ctanos</span>
+						</a>
+					</li>
+					<li class="exit">
+						<a href="../index.html">
+							<i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+							<span>Cerrar sesi&oacute;n</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
+	</div>
+</div>
+<label class="ic-textfield search-mb-open">
+	<i class="fas fa-search prefix-icon" aria-hidden="true"></i>
+	<span class="placeholder">Buscar beneficios</span>
+	<input type="text">
+</label>
+
+<div id="menu-mobile">
+	<div class="content">
+		<i class="fas fa-arrow-left close-menu" aria-hidden="true"></i>
+		<p class="name">Gonzalo Salas</p>
+		<p class="saving">Mi ahorro a la fecha es S/ 320</p>
+		<ul class="menu-list">
+			<li><a href="../views/home.html"><i class="fas fa-home" aria-hidden="true"></i><span>Home</span></a></li>
+			<li><a href="../views/benefits.html"><i class="fas fa-gift" aria-hidden="true"></i><span>Beneficios</span></a></li>
+			<li><a href="../views/coupons.html"><i class="fas fa-tag" aria-hidden="true"></i><span>Mis cupones</span></a></li>
+			<li><a href="../views/locations.html"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Establecimientos</span></a></li>
+			<li><a href="../views/preferences.html"><i class="fas fa-cog" aria-hidden="true"></i><span>Configuraci&oacute;n y preferencias</span></a></li>
+			<li><a href="../views/que-es.html"><i class="fas fa-question" aria-hidden="true"></i><span>&iquest;C&oacute;mo funciona?</span></a></li>
+			<li><a href="../views/faq.html"><i class="fas fa-question" aria-hidden="true"></i><span>Preguntas frecuentes</span></a></li>
+			<li><a href="javascript:void(0)"><i class="fas fa-address-book" aria-hidden="true"></i><span>Contacto</span></a></li>
+			<li><a href="../index.html"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span>Cerrar sesi&oacute;n</span></a></li>
+		</ul>
 	</div>
 </div>
 

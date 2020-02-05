@@ -97,5 +97,14 @@
 #login-page #modal-tyc .content-modal .body-modal ul, #login-page #modal-tyc .content-modal .body-modal ol, #login-page #modal-tratamiento .content-modal .body-modal ul, #login-page #modal-tratamiento .content-modal .body-modal ol, #register-page #modal-tyc .content-modal .body-modal ul, #register-page #modal-tyc .content-modal .body-modal ol, #register-page #modal-tratamiento .content-modal .body-modal ul, #register-page #modal-tratamiento .content-modal .body-modal ol {
   padding-left: 30px;
 }
+#login-page #modal-cantlogin .body-modal p, #register-page #modal-cantlogin .body-modal p {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+#login-page #modal-cantlogin .body-modal p.data span:first-child, #register-page #modal-cantlogin .body-modal p.data span:first-child {
+  font-weight: bold;
+  font-size: inherit;
+  display: block;
+}
 
 /*# sourceMappingURL=login-register.css.map */

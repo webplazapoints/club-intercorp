@@ -62,6 +62,26 @@
 		</div>
 		<div class="body-modal">
 			<p>Escr&iacute;benos tu consulta y te responderemos al brevedad</p>
+			<div class="ic-dropdown">
+				<i class="fas fa-angle-down" aria-hidden="true"></i>
+				<span class="placeholder">Asunto</span>
+				<input type="text" readonly>
+				<input type="hidden">
+				<ul class="ic-droplist">
+					<li class="disabled">Elige un asunto</li>
+					<li class="ic-dropitem" data-value="0">Tengo problemas con el acceso a mi cuenta</li>
+					<li class="ic-dropitem" data-value="1">No puedo utilizar un beneficio</li>
+					<li class="ic-dropitem" data-value="2">Tengo problemas con la configuraci&oacute;n de mi cuenta</li>
+					<li class="ic-dropitem" data-value="3">Otro</li>
+				</ul>
+				<select id="" class="ic-dropdown-mobile">
+					<option disabled selected value="">Elige un asunto</option>
+					<option value="0">Tengo problemas con el acceso a mi cuenta</option>
+					<option value="1">No puedo utilizar un beneficio</option>
+					<option value="2">Tengo problemas con la configuraci&oacute;n de mi cuenta</option>
+					<option value="3">Otro</option>
+				</select>
+			</div>
 			<label class="ic-textarea">
 				<span class="placeholder">Comentario</span>
 				<textarea></textarea>
@@ -72,3 +92,11 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	setTimeout(function(){
+		$(function(){
+			icDropdown();
+		});
+	}, 500);
+</script>

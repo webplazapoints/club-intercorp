@@ -215,15 +215,32 @@ function userDropdown() {
 	});
 
 	$('header .user .initials, header .user .fas').click(function (ev) {
-		if (!showed) {
-			$('.user-dropdown').show('fast');
-			$('header .user > .fas').addClass('showed');
-			showed = true;
+		if(window.innerWidth > 700) {
+			if (!showed) {
+				$('.user-dropdown').show('fast');
+				$('header .user > .fas').addClass('showed');
+				showed = true;
+			}
+			else {
+				$('.user-dropdown').hide('fast');
+				$('header .user > .fas').removeClass('showed');
+				showed = false;
+			}
 		}
 		else {
-			$('.user-dropdown').hide('fast');
-			$('header .user > .fas').removeClass('showed');
-			showed = false;
+			$('#menu-mobile').fadeIn('fast', function(){
+				$('#menu-mobile .content').addClass('visible');
+			});
+		}
+	});
+
+	$('#menu-mobile').click(function(ev){
+		var t = $(ev.target);
+		if(t.is('.close-menu') || t.is('#menu-mobile')) {
+			$('#menu-mobile .content').removeClass('visible');
+			setTimeout(function(){
+				$('#menu-mobile').fadeOut('fast');
+			}, 250);
 		}
 	});
 }
@@ -256,4 +273,16 @@ function icAccordeon(){
 
 function showContact(){
 	icModal('#modal-contact', 'show');
+}
+
+function showSearcherMobile() {
+	$('.search-mb-open').fadeToggle('fast').css({display: 'block'});
+}
+
+function cantLogin(){
+	icModal('#modal-cantlogin', 'show');
+}
+
+function validateForm(){
+	
 }

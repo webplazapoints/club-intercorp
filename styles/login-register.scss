@@ -85,4 +85,19 @@
 			ul, ol { padding-left: 30px; }
 		}
 	}
+	#modal-cantlogin {
+		.body-modal {
+			p {
+				margin-bottom: 10px;
+				font-size: 13px;
+				&.data {
+					span:first-child {
+						font-weight: bold;
+						font-size: inherit;
+						display: block;
+					}
+				}
+			}
+		}
+	}
 }

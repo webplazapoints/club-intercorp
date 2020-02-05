@@ -375,7 +375,7 @@ html, body {
   justify-content: center;
   display: none;
   padding: 20px;
-  z-index: 2;
+  z-index: 4;
 }
 .ic-modal .content-modal {
   background-color: #fff;

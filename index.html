@@ -32,8 +32,29 @@
 			</label>
 			<a href="./views/home.html" class="ic-primary-button">Ver mis beneficios</a>
 			<p class="helper">&iquest;No tienes una cuenta? <a href="./views/register.html">Reg&iacute;strate aqu&iacute;</a></p class="helper">
-			<p class="helper"><a href="">&iquest;No puedes ingresar?</a></p>
+			<p class="helper"><a href="javascript:void(0)" onclick="cantLogin()">&iquest;No puedes ingresar?</a></p>
 		</form>
+
+		<div class="ic-modal" id="modal-cantlogin">
+			<div class="content-modal">
+				<div class="header-modal">
+					<h2 class="title">&iquest;No puedes ingresar?</h2>
+					<i class="fas fa-times close-modal" aria-hidden="true"></i>
+				</div>
+				<div class="body-modal">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id dictum orci, ut finibus augue. In vel quam mi. Donec fringilla malesuada eros, id eleifend tellus. Suspendisse eget libero sem. Cras sit amet erat efficitur, congue magna ac, malesuada purus. Sed vitae sapien velit. Mauris id egestas nibh. Nam at imperdiet enim. Quisque id tristique ante.</p>
+					<p>Maecenas laoreet cursus nisl, eu fermentum urna. Morbi vitae tempor turpis. Donec ut massa orci. Vivamus ac consectetur arcu, vel bibendum sapien. Curabitur fringilla vitae nulla non scelerisque. Pellentesque placerat, erat ac luctus consequat, magna arcu faucibus felis, non faucibus orci eros volutpat justo. Pellentesque et leo sed arcu bibendum scelerisque. Integer ac odio tortor. Vivamus massa mi, tempor non nunc vitae, faucibus pellentesque metus. Nullam imperdiet, purus eget aliquet tempus, tortor ante commodo ipsum, eget mollis enim quam ut risus. Phasellus aliquet risus ipsum, vel feugiat mi sodales non. Phasellus nunc lacus, sollicitudin sit amet ultrices vitae, malesuada quis mauris.</p>
+					<p class="data">
+						<span>Correo electr&oacute;nico</span>
+						<span>correocontacto@intercorp.pe</span>
+					</p>
+					<p class="data">
+						<span>Tel&eacute;fono</span>
+						<span>01 511 3333</span>
+					</p>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<footer hidden></footer>
