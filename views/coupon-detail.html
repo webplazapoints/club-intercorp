@@ -17,17 +17,20 @@
 				<div>
 					<h1 class="title">30% de dscto. en parrillas</h1>
 					<p class="description">Los miembros del Club Intercorp accederán a 30% de dscto. en las parrillas a gas Weber en Promart Homecenter.</p>
-					<div class="buttons">
-						<button type="button" id="generateCoupon" class="ic-primary-button">
-							<span>Generar cup&oacute;n</span>
-							<div class="ic-button-loader"><div></div><div></div><div></div><div></div></div>
-						</button>
-						<a class="ic-primary-button disabled" hidden href="javascript:void(0)">Cup&oacute;n informativo</a>
-					</div>
 					<p class="until">V&aacute;lido desde el 27/01/2020 hasta 14/02/2020</p>
 				</div>
 				<img src="../assets/images/benefit-brand-detail.png" alt="">
-			</div>
+      </div>
+      <div class="timer">
+        <p class="code">C&oacute;digo: <strong>X2UB85</strong></p>
+        <p>Tienes:</p>
+        <ul>
+          <li><strong>02</strong><small>Horas</small></li>
+          <li><strong>24</strong><small>Minutos</small></li>
+          <li><strong>45</strong><small>Segundos</small></li>
+        </ul>
+        <button type="button" id="register">Registrar consumo</button>
+      </div>
 			<div class="locations">
 				<p class="pre">&iquest;D&oacute;nde encuentro Promart?<i class="fas fa-store" aria-hidden="true"></i></p>
 				<section class="directions">
@@ -91,16 +94,17 @@
 
 	<div class="ic-modal" id="modal-cupon">
 		<div class="content-modal">
-			<!-- <div class="header-modal">
-				<h2 class="title">Generar cup&oacute;n</h2>
-				<i class="fas fa-times close-modal" aria-hidden="true"></i>
-			</div> -->
-			<div class="body-modal">
+			<div class="body-modal loading">
+				<img src="../assets/images/loader.png" class="rotate" alt="">
+				<p class="title">Registrando</p>
+      </div>
+      <div class="body-modal">
 				<img src="../assets/images/success-send.png" alt="">
-				<p class="title">Cup&oacute;n generado</p>
-				<p>Tu cup&oacute;n ha sido generado con &eacute;xito, lo encontrar&aacute;s en la zona de <a class="ic-inline-link" href="javascript:void(0)">tus beneficios</a>. Aseg&uacute;rate de utilizarlo antes de la fecha de expiraci&oacute;n.</p>
-				<button class="ic-primary-button ok" type="button">Entendido</button>
-			</div>
+				<p class="title">Operaci&oacute;n exitosa</p>
+				<p>El cup&oacute;n ha sido consumido exitosamente. Puedes revisar el historial de cupones en la secci&oacute;n "Mis cupones".</p>
+				<a href="../views/coupons.html" class="ic-primary-button ok">Entendido</a>
+      </div>
+		</div>
 	</div>
 </main>
 
@@ -112,7 +116,15 @@
 	setTimeout(function(){
 		$(function(){
 			var benefitDetail = new BenefitDetail();
-			benefitDetail.init();
+      benefitDetail.init();
+      
+      $('#register').click(function(){
+        icModal('#modal-cupon', 'show');
+        setTimeout(() => {
+          $('#modal-cupon .body-modal.loading').hide();
+          $('#modal-cupon .body-modal:not(.loading)').css({display: 'flex'});
+        }, 2000);
+      });
 		});
 	}, 500);
 </script>

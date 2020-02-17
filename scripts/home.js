@@ -4,6 +4,7 @@ function Home(){
 
 Home.prototype.init = function(){
 	activeMenu('.home');
+	icModal('#modal-destacados', 'show');
 	this.banner();
 	this.destacados();
 }
@@ -82,9 +83,20 @@ Home.prototype.banner = function(){
 }
 
 Home.prototype.destacados = function(){
+
 	var glide = new Glide('#modal-destacados .glide', {
 		perView: 3,
-		type: 'carousel'
+		type: 'carousel',
+		breakpoints: {
+			850: {
+				perView: 2,
+				peek: { before: 0, after: 70 }
+			},
+			700: {
+				perView: 1,
+				peek: { before: 0, after: 70 }
+			}
+		}
 	}).mount();
 
 	glide.on('run.after', function(){
