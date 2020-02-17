@@ -443,7 +443,7 @@ footer {
 					justify-content: flex-end;
 					width: 100%;
 					margin-top: 10px;
-					.ic-primary-button .ic-button-loader { margin: 0 10px; }
+					// .ic-primary-button .ic-button-loader { margin: 0 10px; }
 				}
 			}
 		}
@@ -453,6 +453,7 @@ footer {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			max-width: 500px;
 			img {
 				margin: 0 auto 15px auto;
 				display: block;

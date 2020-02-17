@@ -520,9 +520,6 @@
   justify-content: center;
   align-items: center;
 }
-#benefit-detail-page #modal-cupon .content-modal .body-modal:not(.loading) {
-  display: none;
-}
 #benefit-detail-page #modal-cupon .content-modal .body-modal img {
   margin: 0 auto 15px auto;
 }
@@ -549,6 +546,9 @@
 }
 #benefit-detail-page #modal-cupon .content-modal .body-modal .ic-primary-button {
   margin-top: 20px;
+}
+#benefit-detail-page #modal-cupon.generated .content-modal .body-modal:not(.loading) {
+  display: none;
 }
 @media screen and (max-width: 700px) {
   #benefit-detail-page {
