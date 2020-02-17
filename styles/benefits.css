@@ -303,42 +303,42 @@
   color: #0039A6;
   margin-right: 5px;
 }
-#benefit-detail-page > div:not(#modal-cupon) {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
-#benefit-detail-page > div:not(#modal-cupon) .image {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .image {
   max-width: 500px;
   width: 100%;
   margin-right: 40px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .image img {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .image img {
   border-radius: 10px;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
 }
-#benefit-detail-page > div:not(#modal-cupon) .content {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content {
   padding-top: 15px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .category {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .category {
   display: flex;
   align-items: center;
   color: #FFB600;
   font-size: 13px;
   font-weight: 500;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .category .fas {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .category .fas {
   font-size: 20px;
   margin-right: 7px;
   color: transparent;
   -webkit-text-stroke: 1px #FFB600;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .brand {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .brand {
   color: #a9a9a9;
   font-weight: 500;
   margin: 15px 0 5px 0;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .block {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -346,37 +346,130 @@
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .block .title {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block .title {
   font-size: 24px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .block .buttons {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block .buttons {
   margin-top: 30px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .block .buttons .ic-primary-button {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block .buttons .ic-primary-button {
   line-height: 44px;
   padding: 0 20px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .block .until {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block .until {
   font-size: 12px;
   color: #B5B5B5;
   margin-top: 12px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .block img {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block img {
   margin-left: 30px;
 }
 @media screen and (max-width: 1080px) {
-  #benefit-detail-page > div:not(#modal-cupon) .content .block {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block {
     flex-direction: column;
   }
-  #benefit-detail-page > div:not(#modal-cupon) .content .block img {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .content .block img {
     margin-left: 0;
   }
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .information .tabs {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #EAEAEA;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer .code {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer .code strong {
+  font-size: inherit;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer p:not(.code) {
+  color: #a9a9a9;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer ul {
+  display: flex;
+  align-items: center;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer ul li {
+  list-style: none;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer ul li:not(:last-child) {
+  margin-right: 7px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer ul li strong {
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .timer button {
+  margin-top: 20px;
+  color: #0039A6;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .pre {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .pre .fas {
+  color: #a9a9a9;
+  margin-left: 5px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions {
+  margin-bottom: 40px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article:not(:last-child) {
+  margin-bottom: 10px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article a > div .district {
+  color: #1A8EAD;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article a > div .hour {
+  color: #a9a9a9;
+  margin-top: 7px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article a .distance {
+  margin-left: 15px;
+  width: 65px;
+  text-align: center;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article a .distance p {
+  font-size: 12px;
+  color: #a9a9a9;
+  margin-bottom: 4px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .locations .directions article a .distance .fas {
+  color: #FFB600;
+  font-size: 30px;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .information .tabs {
   display: flex;
   margin-bottom: 10px;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .information .tabs span {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .information .tabs span {
   font-size: 13px;
   color: #B5B5B5;
   margin-right: 50px;
@@ -384,36 +477,36 @@
   padding-bottom: 10px;
   cursor: pointer;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .information .tabs span.active {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .information .tabs span.active {
   color: #1A8EAD;
   font-weight: 500;
   box-shadow: inset 0px -2px 0px 0px #1A8EAD;
 }
-#benefit-detail-page > div:not(#modal-cupon) .content .information .content div:not(:first-child) {
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .information .content div:not(:first-child) {
   display: none;
 }
 @media screen and (max-width: 1080px) {
-  #benefit-detail-page > div:not(#modal-cupon) .image {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .image {
     max-width: none;
     width: 40%;
   }
-  #benefit-detail-page > div:not(#modal-cupon) .image img {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .image img {
     width: 100%;
   }
-  #benefit-detail-page > div:not(#modal-cupon) .content {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .content {
     width: 60%;
   }
 }
 @media screen and (max-width: 700px) {
-  #benefit-detail-page > div:not(#modal-cupon) {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) {
     flex-direction: column;
   }
-  #benefit-detail-page > div:not(#modal-cupon) .image {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .image {
     width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
   }
-  #benefit-detail-page > div:not(#modal-cupon) .content {
+  #benefit-detail-page > div:not(#modal-cupon):not(.information) .content {
     width: 100%;
   }
 }
@@ -427,8 +520,23 @@
   justify-content: center;
   align-items: center;
 }
+#benefit-detail-page #modal-cupon .content-modal .body-modal:not(.loading) {
+  display: none;
+}
 #benefit-detail-page #modal-cupon .content-modal .body-modal img {
   margin: 0 auto 15px auto;
+}
+#benefit-detail-page #modal-cupon .content-modal .body-modal .rotate {
+  animation: rotate 2s infinite linear;
+  transition: 0.2s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(-360deg);
+  }
 }
 #benefit-detail-page #modal-cupon .content-modal .body-modal .title {
   font-size: 22px;
