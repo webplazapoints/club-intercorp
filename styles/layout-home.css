@@ -244,8 +244,8 @@ header .row .social .user .user-dropdown .options li.exit {
   }
 }
 header .search-mb-open {
-  margin-right: 30px;
-  margin-top: 15px;
+  margin: 10px 20px 20px;
+  width: calc(100% - 40px);
   display: none;
 }
 header .search-mb-open .prefix-icon {
@@ -490,20 +490,47 @@ footer .copy {
     display: block;
   }
 }
-footer #modal-contact .content-modal {
+footer #modal-contact .content-modal:not(.success-send) {
   max-width: 500px;
 }
-footer #modal-contact .content-modal .body-modal > p {
+footer #modal-contact .content-modal:not(.success-send) .body-modal > p {
   margin-bottom: 10px;
 }
-footer #modal-contact .content-modal .body-modal .ic-dropdown {
+footer #modal-contact .content-modal:not(.success-send) .body-modal .ic-dropdown {
   margin-bottom: 10px;
 }
-footer #modal-contact .content-modal .body-modal .buttons {
+footer #modal-contact .content-modal:not(.success-send) .body-modal .buttons {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   margin-top: 10px;
+}
+footer #modal-contact .content-modal:not(.success-send) .body-modal .buttons .ic-primary-button .ic-button-loader {
+  margin: 0 10px;
+}
+footer #modal-contact .success-send {
+  display: none;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer #modal-contact .success-send img {
+  margin: 0 auto 15px auto;
+  display: block;
+}
+footer #modal-contact .success-send .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0039A6;
+}
+footer #modal-contact .success-send p {
+  text-align: center;
+}
+footer #modal-contact .success-send .ic-primary-button {
+  display: block;
+  margin: 20px auto 0 auto;
 }
 
 #home-page #banner {
@@ -617,6 +644,8 @@ footer #modal-contact .content-modal .body-modal .buttons {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
   padding: 30px 15px;
   list-style: none;
+  transition: 0.2s;
+  cursor: pointer;
 }
 #home-page #categories .category-list .category.cat-shop {
   background-color: #FFB600;
@@ -642,8 +671,14 @@ footer #modal-contact .content-modal .body-modal .buttons {
 #home-page #categories .category-list .category.cat-travel {
   background-color: #CC9900;
 }
+#home-page #categories .category-list .category:active {
+  transform: scale(0.95);
+}
 #home-page #categories .category-list .category:not(:last-child) {
   margin-right: 20px;
+}
+#home-page #categories .category-list .category a {
+  text-decoration: none;
 }
 #home-page #categories .category-list .category .icon {
   display: block;
@@ -998,6 +1033,195 @@ footer #modal-contact .content-modal .body-modal .buttons {
   #home-page #benefits > .ic-primary-button {
     margin-top: 10px;
   }
+}
+#home-page #modal-destacados .content-modal {
+  width: 85%;
+  max-width: 800px;
+}
+#home-page #modal-destacados .content-modal .benefit-list {
+  display: flex;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit {
+  width: calc(100% / 4 - 15px);
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  transition: 0.2s;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit:not(:last-child) {
+  margin-right: 20px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit.glide__slide--active {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .tag-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #EC00A6;
+  color: white;
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 7px;
+  z-index: 1;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .tag-new .far {
+  color: white;
+  font-size: 12px;
+  margin-right: 3px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 240px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .image img {
+  width: 100%;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail {
+  padding-top: 15px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .brand {
+  font-size: 13px;
+  color: #B5B5B5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .name {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .ic-primary-button {
+  padding: 0 30px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li:not(:last-child) {
+  margin-right: 10px;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li i {
+  font-size: 20px;
+  color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li:first-child i {
+  -webkit-text-stroke: 1px #1A8EAD;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li:last-child i {
+  -webkit-text-stroke: 1px #D82323;
+}
+#home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li:active i {
+  transform: scale(0.95);
+}
+@media (hover: hover) {
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li:first-child:hover i {
+    color: #1A8EAD;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .share li:last-child:hover i {
+    color: #D82323;
+  }
+}
+@media screen and (max-width: 1028px) {
+  #home-page #modal-destacados .content-modal .benefit-list .benefit {
+    width: calc(100% / 2 - 10px);
+    margin-bottom: 20px;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit:not(:nth-child(2n)) {
+    margin-right: 20px;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit:nth-child(2n), #home-page #modal-destacados .content-modal .benefit-list .benefit:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  #home-page #modal-destacados .content-modal .benefit-list .benefit {
+    width: 100%;
+    margin-right: 0 !important;
+    display: flex;
+    align-items: flex-start;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .image {
+    width: 30%;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .detail {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 440px) {
+  #home-page #modal-destacados .content-modal .benefit-list .benefit {
+    padding: 0;
+    overflow: hidden;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .image {
+    border-radius: 0;
+    height: 100%;
+    max-height: none;
+    position: relative;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .image img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+  }
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .detail {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #home-page #modal-destacados .content-modal .benefit-list .benefit .detail .buttons .ic-primary-button {
+    padding: 0 15px;
+  }
+}
+#home-page #modal-destacados .content-modal .glide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-page #modal-destacados .content-modal .glide__arrows .glide__counter {
+  font-size: 12px;
+  color: #a9a9a9;
+  padding: 0 10px;
+}
+#home-page #modal-destacados .content-modal .glide__arrows .glide__arrow {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  border: none;
+  height: 42px;
+  width: 42px;
+  transform: translateY(0);
+}
+#home-page #modal-destacados .content-modal .glide__arrows .glide__arrow .fas {
+  color: #0039A6;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=layout-home.css.map */

@@ -164,11 +164,8 @@
   cursor: pointer;
   transition: 0.2s;
 }
-#coupons-page .coupon-list section .benefit .detail .buttons .share li:first-child i {
-  -webkit-text-stroke: 1px #1A8EAD;
-}
 #coupons-page .coupon-list section .benefit .detail .buttons .share li:last-child i {
-  -webkit-text-stroke: 1px #D82323;
+  color: #D82323;
 }
 #coupons-page .coupon-list section .benefit .detail .buttons .share li:active i {
   transform: scale(0.95);

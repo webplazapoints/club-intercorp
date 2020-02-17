@@ -146,8 +146,8 @@
 									cursor: pointer;
 									transition: $fast;
 								}
-								&:first-child i { -webkit-text-stroke: 1px $blue2; }
-								&:last-child i { -webkit-text-stroke: 1px $red; }
+								// &:first-child i { -webkit-text-stroke: 1px $blue2; }
+								&:last-child i { color: $red; }
 								&:active i { transform: scale(0.95); }
 								@media (hover: hover){
 									&:first-child:hover i { color: $blue2; }

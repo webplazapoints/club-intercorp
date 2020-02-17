@@ -30,7 +30,7 @@ function readLayout() {
 
 function icDropdown() {
 	var open = false;
-	if(window.innerWidth > 600) {
+	// if(window.innerWidth > 600) {
 		$('.ic-dropdown').click(function (ev) {
 			var t = $(ev.target);
 			var container = t.closest('.ic-dropdown');
@@ -51,16 +51,16 @@ function icDropdown() {
 			}
 		});
 
-		$('.ic-dropdown .ic-dropdown-mobile').change(function(e){
-			var t = $(e.target);
-			var value = t.val();
-			var option = t.find('option[value="' + value + '"]').text();
-			var container = t.closest('.ic-dropdown');
-			container.find('input:text').val(option);
-			container.addClass('edited');
-			container.find('.ic-droplist').hide();
-			container.removeClass('open');
-		});
+		// $('.ic-dropdown .ic-dropdown-mobile').change(function(e){
+		// 	var t = $(e.target);
+		// 	var value = t.val();
+		// 	var option = t.find('option[value="' + value + '"]').text();
+		// 	var container = t.closest('.ic-dropdown');
+		// 	container.find('input:text').val(option);
+		// 	container.addClass('edited');
+		// 	container.find('.ic-droplist').hide();
+		// 	container.removeClass('open');
+		// });
 	
 		$('.ic-dropdown .ic-dropitem').click(function (ev) {
 			var t = $(ev.target);
@@ -80,7 +80,7 @@ function icDropdown() {
 				open = false;
 			}
 		});
-	}
+	// }
 }
 
 function icTextfield() {
@@ -163,7 +163,7 @@ function icModal(modal, action) {
 		}).css({ display: 'flex' });
 	}
 	else if (action == 'hide') {
-		$(modal).find('.content-modal').addClass('visible');
+		$(modal).find('.content-modal').removeClass('visible');
 		setTimeout(function () {
 			$(modal).fadeOut('fast');
 			enableScroll();
@@ -277,12 +277,99 @@ function showContact(){
 
 function showSearcherMobile() {
 	$('.search-mb-open').fadeToggle('fast').css({display: 'block'});
+	$(window).resize(function(){
+		if(window.innerWidth > 700) { $('.search-mb-open').removeAttr('style'); }
+	})
 }
 
 function cantLogin(){
 	icModal('#modal-cantlogin', 'show');
 }
 
-function validateForm(){
-	
+function isValid(entry, regex){
+   
+	return regex.test(entry);
+}
+
+function icValidateForm(form){
+	var regexEmpty = /(?!^$|\s+)/;
+	var regexDni = /^[0-9]{8}$/;
+	var regexDocument = /^[A-Za-z0-9]{1,15}$/;
+	var regexPhone = /^[0-9]{7,15}$/;
+	var regexName = /^([A-Za-záéíóúÁÉÍÓÚñÑ ]){1,250}$/;
+	var regexEmail = /^[a-zA-Z0-9\.\!\#\$\%\&\'\*\+\/\=\?\^\_\`\{\|\}\~\-]+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$/;
+	var regexGender = /^[MF]{1}$/;
+
+	var fields = $(form).find('[data-validate]');
+	$(form).find('.label-error').remove();
+
+	$.each(fields, (index, value) => {
+			var v = $(value);
+			var type = v.attr('data-type');
+			var errorMessage = v.attr('data-message');
+
+			var entry;
+			if(v.is('.ic-textfield')) { entry = v.find('input:text, input:password').val(); }
+			else if(v.is('.ic-drop-group')) { entry = v.find('.ic-drop-group').val(); }
+			else if(v.is('.ic-dropdown')) { entry = v.find('input:text').val() }
+
+			var finalRegex;
+			switch(type){
+					case 'dni': finalRegex = regexDni; break;
+					case 'document': finalRegex = regexDocument; break;
+					case 'phone': finalRegex = regexPhone; break;
+					case 'drop': finalRegex = regexEmpty; break;
+					case 'name': finalRegex = regexName; break;
+					case 'email': finalRegex = regexEmail; break;
+					case 'gender': finalRegex = regexGender; break;
+					default: finalRegex = regexEmpty;
+			}
+
+			if(isValid(entry, finalRegex)){
+					v.removeClass('error');
+					v.attr('data-validate', true);
+			}
+			else {
+					v.addClass('error');
+					v.append(`<span class="label-error">${errorMessage}</span>`);
+					v.attr('data-validate', false);
+			}
+	});
+
+	fields = $(form).find('[data-validate="false"]');
+	return fields.length == 0;
+}
+
+function emptyValuesForm(form){
+	var fields = $(form).find('.ic-textfield, .ic-dropdown');
+	const interval = setInterval(() => {
+			if(fields.length > 0) {
+					$.each(fields, (index, value) => {
+							var ipt = $(value).find('input:text');
+							if(ipt.val() != '') {
+									$(ipt).parent().addClass('focus');
+							}
+					});
+					clearInterval(interval);
+			}
+	}, 100);
+}
+
+function submitEnviar(e) {
+	var t = $(e);
+	t.find('span').hide();
+	t.find('.ic-button-loader').show();
+	setTimeout(function(){
+		t.find('.ic-button-loader').hide();
+		t.find('span').show();
+		t.closest('.content-modal').fadeOut();
+		setTimeout(function(){
+			$('.success-send').fadeIn().css({display: 'flex'});
+		}, 250);
+	}, 2000);
+
+	$('.ok').click(function(e){
+		var t = $(e.target);
+		icModal('#modal-contact', 'hide');
+	});
 }

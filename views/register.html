@@ -8,39 +8,39 @@
 	<img id="logo" src="../assets/images/logo-intercorp-white.png" alt="Club Intercorp">
 	<form id="form-register">
 		<h1>Reg&iacute;strate</h1>
-		<div class="ic-dropdown mt">
+		<div class="ic-dropdown mt" data-validate="false" data-message="Elige un tipo de documento" data-type="drop">
 			<i class="fas fa-angle-down" aria-hidden="true"></i>
 			<span class="placeholder">Tipo de documento</span>
 			<input type="text" readonly>
 			<input type="hidden">
 			<ul class="ic-droplist">
 				<li class="disabled">Elegir un tipo</li>
-				<li class="ic-dropitem" data-value="0">DNI</li>
-				<li class="ic-dropitem" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
-				<li class="ic-dropitem" data-value="2">Pasaporte</li>
-				<li class="ic-dropitem" data-value="3">Permiso temporal de permanencia (PTP)</li>
+				<li class="ic-dropitem choose-type" data-value="0">DNI</li>
+				<li class="ic-dropitem choose-type" data-value="1">Carnet de extranjer&iacute;a / C&eacute;dula</li>
+				<li class="ic-dropitem choose-type" data-value="2">Pasaporte</li>
+				<li class="ic-dropitem choose-type" data-value="3">Permiso temporal de permanencia (PTP)</li>
 			</ul>
-			<select id="" class="ic-dropdown-mobile">
+			<!-- <select id="" class="ic-dropdown-mobile">
 				<option disabled selected value="">Elegir un tipo</option>
 				<option value="0">DNI</option>
 				<option value="1">Carnet de extranjer&iacute;a / C&eacute;dula</option>
 				<option value="2">Pasaporte</option>
 				<option value="3">Permiso temporal de permanencia (PTP)</option>
-			</select>
+			</select> -->
 		</div>
-		<label class="ic-textfield mt">
+		<label id="document-field" class="ic-textfield mt" data-validate="false" data-message="Ingresa un nro de documento v&aacute;lido" data-type="document">
 			<span class="placeholder">N&deg; de documento</span>
 			<input type="text">
 		</label>
-		<label class="ic-textfield mt">
+		<label class="ic-textfield mt" data-validate="false" data-message="Ingresa un nro de celular v&aacute;lido" data-type="phone">
 			<span class="placeholder">N&deg; de celular personal</span>
 			<input type="text">
 		</label>
-		<label class="ic-textfield mt">
+		<label class="ic-textfield mt" data-validate="false" data-message="Ingresa un email v&aacute;lido" data-type="email">
 			<span class="placeholder">Correo electr&oacute;nico personal</span>
 			<input type="text">
 		</label>
-		<label class="ic-textfield mt">
+		<label class="ic-textfield mt" data-validate="false" data-message="Ingresa una contrase&ntilde;a" data-type="empty">
 			<span class="placeholder">Contrase&ntilde;a</span>
 			<input type="password">
 			<i class="fas fa-eye-slash show-password" aria-hidden="true" data-show="false"></i>
@@ -55,7 +55,7 @@
 			<i class="far fa-square" aria-hidden="true"></i>
 			<span class="label">Acepto las <a href="javascript:void(0)" class="open-conditions">condiciones de tratamiento de datos</a></span>
 		</label>
-		<a href="./home.html" class="ic-primary-button">Registrarme</a>
+		<a href="javascript:void(0)" id="submitRegister" class="ic-primary-button">Registrarme</a>
 		<p class="helper">&iquest;Ya tienes una cuenta? <a href="../index.html">Ingresa aqu&iacute;</a></p class="helper">
 	</form>
 

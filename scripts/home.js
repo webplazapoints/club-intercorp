@@ -5,6 +5,7 @@ function Home(){
 Home.prototype.init = function(){
 	activeMenu('.home');
 	this.banner();
+	this.destacados();
 }
 
 Home.prototype.banner = function(){
@@ -77,5 +78,19 @@ Home.prototype.banner = function(){
 		setTimeout(function(){
 			appear(sib);
 		}, 250);
+	});
+}
+
+Home.prototype.destacados = function(){
+	var glide = new Glide('#modal-destacados .glide', {
+		perView: 3,
+		type: 'carousel'
+	}).mount();
+
+	glide.on('run.after', function(){
+		var index = $('.glide__bullet--active').index();
+		var total = $('.glide__bullet').length;
+
+		$('.glide__counter').text((index + 1) + ' de ' + total);
 	});
 }

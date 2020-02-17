@@ -420,58 +420,26 @@
 #benefit-detail-page #modal-cupon .content-modal {
   max-width: 500px;
 }
-#benefit-detail-page #modal-cupon .content-modal .body-modal p {
-  margin-bottom: 15px;
-  font-size: 13px;
-}
-#benefit-detail-page #modal-cupon .content-modal .body-modal .email {
-  display: flex;
-}
-#benefit-detail-page #modal-cupon .content-modal .body-modal .email .ic-textfield {
-  margin-right: 10px;
-  width: calc(100% - 148px);
-}
-#benefit-detail-page #modal-cupon .content-modal .body-modal .email .ic-primary-button {
-  padding: 0 30px;
-  width: 138px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (max-width: 430px) {
-  #benefit-detail-page #modal-cupon .content-modal .body-modal .email {
-    flex-direction: column;
-  }
-  #benefit-detail-page #modal-cupon .content-modal .body-modal .email .ic-textfield {
-    width: 100%;
-    margin-right: 0;
-  }
-  #benefit-detail-page #modal-cupon .content-modal .body-modal .email .ic-primary-button {
-    width: 100%;
-    margin-top: 10px;
-    min-height: 40px;
-  }
-}
-#benefit-detail-page #modal-cupon .content-modal.success-send {
+#benefit-detail-page #modal-cupon .content-modal .body-modal {
   padding: 40px;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#benefit-detail-page #modal-cupon .content-modal.success-send img {
-  margin-bottom: 15px;
+#benefit-detail-page #modal-cupon .content-modal .body-modal img {
+  margin: 0 auto 15px auto;
 }
-#benefit-detail-page #modal-cupon .content-modal.success-send .title {
+#benefit-detail-page #modal-cupon .content-modal .body-modal .title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 5px;
   color: #0039A6;
 }
-#benefit-detail-page #modal-cupon .content-modal.success-send p {
+#benefit-detail-page #modal-cupon .content-modal .body-modal p {
   text-align: center;
 }
-#benefit-detail-page #modal-cupon .content-modal.success-send .ic-primary-button {
+#benefit-detail-page #modal-cupon .content-modal .body-modal .ic-primary-button {
   margin-top: 20px;
 }
 @media screen and (max-width: 700px) {

@@ -46,19 +46,16 @@ BenefitDetail.prototype.generateCoupon = function(){
 		t.find('span').addClass('hide');
 		t.find('.ic-button-loader').show();
 		setTimeout(function() {
-			t.closest('.content-modal:not(.success-send)').hide();
-			t.closest('.content-modal').siblings('.success-send').show().css({display: 'flex'});
+			// t.closest('.content-modal:not(.success-send)').hide();
+			// t.closest('.content-modal').siblings('.success-send').show().css({display: 'flex'});
 			t.find('.ic-button-loader').hide();
 			t.find('span').removeClass('hide');
+			icModal('#modal-cupon', 'show');
 		}, 2000);
 	});
 
 	$('.ok').click(function(e){
 		var t = $(e.target);
 		icModal('#modal-cupon', 'hide');
-		setTimeout(function(){
-			t.closest('.success-send').hide();
-			t.closest('.success-send').siblings('.content-modal').show();
-		}, 1000);
 	});
 }
