@@ -43,13 +43,13 @@ BenefitDetail.prototype.generateCoupon = function(){
 
 	$('#generateCoupon').click(function(e){
 		var t = $(e.target);
-		t.find('span').hide();
+		t.find('span').addClass('hide');
 		t.find('.ic-button-loader').show();
 		setTimeout(function() {
 			t.closest('.content-modal:not(.success-send)').hide();
 			t.closest('.content-modal').siblings('.success-send').show().css({display: 'flex'});
 			t.find('.ic-button-loader').hide();
-			t.find('span').show();
+			t.find('span').removeClass('hide');
 		}, 2000);
 	});
 

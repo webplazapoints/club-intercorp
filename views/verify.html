@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head></head>
+<body>
+<header hidden></header>
+
+<main id="verify-page">
+	<img id="logo" src="../assets/images/logo-intercorp-white.png" alt="Club Intercorp">
+	<div class="content-verify">
+		<h1>Verifica tu n&uacute;mero m&oacute;vil</h1>
+		<p class="subtitle">Club Intercorp enviar&aacute; un mensaje de texto para verificar tu n&uacute;mero m&oacute;vil. Este proceso solos se realizar&aacute; en el primer ingreso de este dispositivo.</p>
+		<div class="input-verification">
+			<input type="text" class="code" id="">
+			<input type="text" class="code" id="">
+			<input type="text" class="code" id="">
+			<input type="text" class="code" id="">
+			<input type="text" class="code" id="">
+			<input type="text" class="code" id="">
+		</div>
+		<span class="error-code">Ingrese el c&oacute;digo de verificaci&oacute;n que hemos enviado a tu celular.</span>
+		<button type="button" id="validateCode" class="ic-primary-button">
+			<span>Validar</span>
+			<div class="ic-button-loader"><div></div><div></div><div></div><div></div></div>
+		</button>
+		<div class="options">
+			<span>T&eacute;rminos y condiciones</span>
+			<span>Pol&iacute;ticas de privacidad</span>
+		</div>
+	</div>
+
+	<div class="ic-modal" id="modal-verify">
+		<div class="content-modal">
+			<div class="body-modal">
+				<img src="../assets/images/success-send.png" alt="&iexcl;Operci&oacute; exitosa!">
+				<p class="title">Operaci&oacute;n exitosa</p>
+				<p>La validaci&oacute;n se realiz&oacute; con &eacute;xito</p>
+				<a href="../views/home.html" class="ic-primary-button">Entendido</a>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer hidden></footer>
+
+<script src="../scripts/jquery.min.js"></script>
+<script src="../scripts/util.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.code').on('input', function(e){
+		var t = $(e.target);
+		var num = t.val();
+		var regexCode = /^[0-9]{1}$/;
+		if(regexCode.test(num)) {
+			if(t.next().is('input:text')) { t.next().focus(); }
+			else { $('#validate').focus(); }
+		}
+		else { t.val(''); }
+	});
+
+	$('#validateCode').click(function(e){
+		var t = $(e.target);
+		t.find('span').addClass('hide');
+		t.find('.ic-button-loader').show();
+		setTimeout(function() {
+			t.find('.ic-button-loader').hide();
+			t.find('span').removeClass('hide');
+			icModal('#modal-verify', 'show');
+		}, 2000);
+	});
+});
+</script>
+</body>
+</html>

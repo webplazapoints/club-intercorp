@@ -306,6 +306,7 @@ html, body {
 
 .ic-primary-button {
   display: inline-block;
+  position: relative;
   line-height: 40px;
   outline: none;
   border: none;
@@ -324,6 +325,9 @@ html, body {
   font-size: 12px;
   color: white;
   pointer-events: none;
+}
+.ic-primary-button span.hide {
+  visibility: hidden;
 }
 .ic-primary-button:active {
   transform: scale(0.95);
@@ -460,10 +464,12 @@ html, body {
 
 .ic-button-loader {
   display: none;
-  position: relative;
+  position: absolute;
   width: 20px;
   height: 20px;
   opacity: 0.5;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
 }
 .ic-button-loader div {
   box-sizing: border-box;
