@@ -183,9 +183,10 @@ header .row .social .user .user-dropdown .hi {
   font-weight: bold;
   color: #0039A6;
 }
-header .row .social .user .user-dropdown .email {
+header .row .social .user .user-dropdown .saving {
   font-size: 12px;
   color: #a9a9a9;
+  margin-top: 4px;
 }
 header .row .social .user .user-dropdown .options {
   border-top: 1px solid #EAEAEA;
@@ -506,15 +507,13 @@ footer #modal-contact .content-modal:not(.success-send) .body-modal .buttons {
   width: 100%;
   margin-top: 10px;
 }
-footer #modal-contact .content-modal:not(.success-send) .body-modal .buttons .ic-primary-button .ic-button-loader {
-  margin: 0 10px;
-}
 footer #modal-contact .success-send {
   display: none;
   padding: 40px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 500px;
 }
 footer #modal-contact .success-send img {
   margin: 0 auto 15px auto;

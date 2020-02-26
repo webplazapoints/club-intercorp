@@ -264,7 +264,7 @@
 			margin-right: 5px;
 		}
 	}
-	& > div:not(#modal-cupon) {
+	& > div:not(#modal-cupon):not(.information) {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
@@ -325,6 +325,102 @@
 					img { margin-left: 0; }
 				}
 			}
+			.timer {
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+				border-bottom: 1px solid $borderGray;
+				.code {
+					margin-bottom: 15px;
+					font-size: 18px;
+					strong { font-size: inherit; }
+				}
+				p:not(.code) {
+					color: $gray;
+					font-size: 12px;
+					margin-bottom: 7px;
+				}
+				ul {
+					display: flex;
+					align-items: center;
+					li {
+						list-style: none;
+						border: 1px solid $borderGray;
+						border-radius: 10px;
+						padding: 10px;
+						text-align: center;
+						width: 100px;
+						&:not(:last-child) { margin-right: 7px; }
+						strong {
+							font-size: 20px;
+							margin-bottom: 5px;
+							display: block;
+						}
+					}
+				}
+				button {
+					margin-top: 20px;
+					color: $blue;
+					background-color: transparent;
+					font-weight: 500;
+					font-size: 12px;
+					border: none;
+					cursor: pointer;
+				}
+			}
+			.locations {
+				margin-top: 30px;
+				padding-top: 30px;
+				border-top: 1px solid $borderGray;
+				.pre {
+					font-size: 14px;
+					font-weight: bold;
+					margin-bottom: 20px;
+					.fas {
+						color: $gray;
+						margin-left: 5px;
+					}
+				}
+				.directions {
+					margin-bottom: 40px;
+					article {
+						&:not(:last-child) { margin-bottom: 10px; }
+						a {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							border: 1px solid $borderGray;
+							border-radius: 10px;
+							padding: 20px;
+							text-decoration: none;
+							& > div {
+								.district {
+									color: $blue2;
+									font-weight: bold;
+									margin-bottom: 7px;
+								}
+								.hour {
+									color: $gray;
+									margin-top: 7px;
+								}
+							}
+							.distance {
+								margin-left: 15px;
+								width: 65px;
+								text-align: center;
+								p {
+									font-size: 12px;
+									color: $gray;
+									margin-bottom: 4px;
+								}
+								.fas {
+									color: #FFB600;
+									font-size: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
 			.information {
 				.tabs {
 					display: flex;
@@ -374,6 +470,14 @@
 				justify-content: center;
 				align-items: center;
 				img { margin: 0 auto 15px auto; }
+				.rotate {
+					animation: rotate 2s infinite linear;
+					transition: $fast;
+					@keyframes rotate {
+						0% { transform: rotate(0deg); }
+						0% { transform: rotate(-360deg); }
+					}
+				}
 				.title {
 					font-size: 22px;
 					font-weight: bold;
@@ -385,6 +489,9 @@
 					margin-top: 20px;
 				}
 			}
+		}
+		&.generated {
+			.content-modal .body-modal:not(.loading) { display: none; } 
 		}
 	}
 	@media screen and (max-width: 700px){

@@ -90,8 +90,14 @@ Home.prototype.destacados = function(){
 		perView: 3,
 		type: 'carousel',
 		breakpoints: {
-			900: { perView: 2 },
-			630: { perView: 1 }
+			850: {
+				perView: 2,
+				peek: { before: 0, after: 70 }
+			},
+			700: {
+				perView: 1,
+				peek: { before: 0, after: 70 }
+			}
 		}
 	}).mount();
 

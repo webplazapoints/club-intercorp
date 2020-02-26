@@ -1,0 +1,201 @@
+@import '../styles/style.variable.scss';
+
+#brand-page {
+  padding-top: 50px;
+	padding-bottom: 150px;
+	.back {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		color: $blue;
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		.fas {
+			color: $blue;
+			margin-right: 5px;
+		}
+  }
+  & > div:not(.ic-paginator) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $borderGray;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		.brand-detail {
+			display: flex;
+			align-items: center;
+			.brand-image {
+				display: block;
+				border: 1px solid $borderGray;
+				border-radius: 5px;
+				overflow: hidden;
+				margin-right: 20px;
+				padding: 20px;
+				width: 120px;
+				height: 120px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				img { width: 100%; }
+			}
+			& > div {
+				.category {
+					display: flex;
+					align-items: center;
+					font-size: 14px;
+					color: #FFB600;
+					.fas {
+						color: #FFB600;
+						font-size: 20px;
+						margin-right: 5px;
+					}
+				}
+				.brand-title {
+					font-size: 20px;
+					font-weight: 900;
+					margin: 5px 0
+				}
+				.benefit-counter {
+					font-size: 14px;
+					color: $gray;
+				}
+			}
+		}
+	}
+	& > p {
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	.benefit-list {
+		display: flex;
+		flex-wrap: wrap;
+		.benefit {
+			width: calc(100% / 4 - 15px);
+			border: 1px solid $borderGray;
+			border-radius: 10px;
+			padding: 20px;
+			position: relative;
+			&:not(:last-child) { margin-right: 20px; }
+			.tag-new {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				background-color: $pink;
+				color: white;
+				font-size: 12px;
+				padding: 7px;
+				border-radius: 7px;
+				z-index: 1;
+				.far {
+					color: white;
+					font-size: 12px;
+					margin-right: 3px;
+				}
+			}
+			.image {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				max-height: 240px;
+				width: 100%;
+				overflow: hidden;
+				border-radius: 10px;
+				img { width: 100%; }
+			}
+			.detail {
+				padding-top: 15px;
+				.brand {
+					font-size: 13px;
+					color: $placeholder;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				.name {
+					font-size: 15px;
+					font-weight: 500;
+					margin-top: 3px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				.buttons {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin-top: 20px;
+					.ic-primary-button { padding: 0 30px; }
+					.share {
+						display: flex;
+						align-items: center;
+						list-style: none;
+						li {
+							&:not(:last-child) { margin-right: 10px; }
+							i {
+								font-size: 20px;
+								color: transparent;
+								cursor: pointer;
+								transition: $fast;
+							}
+							&:first-child i { -webkit-text-stroke: 1px $blue2; }
+							&:last-child i { -webkit-text-stroke: 1px $red; }
+							&:active i { transform: scale(0.95); }
+							@media (hover: hover){
+								&:first-child:hover i { color: $blue2; }
+								&:last-child:hover i { color: $red; }
+							}
+							
+						}
+					}
+				}
+			}
+			@media screen and (max-width: 1028px){
+				width: calc(100% / 2 - 10px);
+				margin-bottom: 20px;
+				&:not(:nth-child(2n)) { margin-right: 20px; }
+				&:nth-child(2n), &:last-child { margin-right: 0; }
+			}
+			@media screen and (max-width: 540px) {
+				width: 100%;
+				margin-right: 0 !important;
+				display: flex;
+				align-items: flex-start;
+				.image { width: 30%; }
+				.detail {
+					padding-top: 0;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					height: 100%;
+					width: 70%;
+					padding-left: 20px;
+				}
+			}
+			@media screen and (max-width: 440px) {
+				padding: 0;
+				overflow: hidden;
+				.image {
+					border-radius: 0;
+					height: 100%;
+					max-height: none;
+					position: relative;
+					img {
+						height: 100%;
+						width: auto;
+						position: absolute;
+					}
+				}
+				.detail {
+					padding: 15px;
+				}
+			}
+			@media screen and (max-width: 400px) {
+				.detail .buttons .ic-primary-button { padding: 0 15px; }
+			}
+		}
+	}
+	.ic-paginator { margin-top: 30px; }
+}
