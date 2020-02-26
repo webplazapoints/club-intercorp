@@ -24,6 +24,7 @@ header {
 			#logo {
 				width: 160px;
 				margin-right: 30px;
+				cursor: pointer;
 			}
 			.ic-textfield {
 				margin-right: 30px;
@@ -564,11 +565,15 @@ footer {
 				width: calc(100% / 8 - 140px / 8);
 				border-radius: 10px;
 				box-shadow: $boxShadow;
-				padding: 30px 15px;
 				list-style: none;
 				transition: $fast;
 				cursor: pointer;
-				$colors: ("shop": #FFB600, "education": #A846E8, "restaurants": #FF2D2D, "family": #CE1D87, "entertainment": #00DD7E, "tec": #40C5FF, "financy": #4481FC, "travel": #CC9900);
+				a {
+					padding: 30px 15px;
+					display: block;
+					height: 100%;
+				}
+				$colors: ("compras": #FFB600, "educacion": #A846E8, "restaurantes": #FF2D2D, "familia": #CE1D87, "entretenimiento": #00DD7E, "tecnologia": #40C5FF, "finanzas": #4481FC, "viajes": #CC9900);
 				@each $category, $color in $colors {
 					&.cat-#{$category} {
 						background-color: $color;
@@ -861,7 +866,6 @@ footer {
 
 	#modal-destacados {
 		.content-modal {
-			width: 85%;
 			max-width: 800px;
 			.benefit-list {
 				display: flex;
@@ -954,49 +958,13 @@ footer {
 						&:not(:nth-child(2n)) { margin-right: 20px; }
 						&:nth-child(2n), &:last-child { margin-right: 0; }
 					}
-					@media screen and (max-width: 540px) {
-						width: 100%;
-						margin-right: 0 !important;
-						display: flex;
-						align-items: flex-start;
-						.image { width: 30%; }
-						.detail {
-							padding-top: 0;
-							display: flex;
-							flex-direction: column;
-							justify-content: space-between;
-							height: 100%;
-							width: 70%;
-							padding-left: 20px;
-						}
-					}
-					@media screen and (max-width: 440px) {
-						padding: 0;
-						overflow: hidden;
-						.image {
-							border-radius: 0;
-							height: 100%;
-							max-height: none;
-							position: relative;
-							img {
-								height: 100%;
-								width: auto;
-								position: absolute;
-							}
-						}
-						.detail {
-							padding: 15px;
-						}
-					}
-					@media screen and (max-width: 400px) {
-						.detail .buttons .ic-primary-button { padding: 0 15px; }
-					}
 				}
 			}
 			.glide__arrows {
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				margin-top: 20px;
 				.glide__counter {
 					font-size: 12px;
 					color: $gray;

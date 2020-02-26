@@ -5,12 +5,35 @@ function Benefits(){
 Benefits.prototype.init = function(){
 	activeMenu('.benefits');
 	this.filters();
+	this.setCategories();
 }
 
 Benefits.prototype.filters = function(){
 	$('#filter-mb').click(function() {
 		icModal('#modal-filter', 'show');
 	});
+}
+
+Benefits.prototype.setCategories = function(){
+	var params = paramToJson();
+
+	if(params.categoria) {
+		var arCategories = params.categoria.split(',');
+		arCategories.forEach(function(category){
+			var container = $('[data-category="' + category + '"]');
+			container.addClass('on');
+			container.find('.far').attr({class: 'fas fa-check-square'});
+		});
+	}
+
+	if(params.marca) {
+		var arBrands = params.marca.split(',');
+		arBrands.forEach(function(brand){
+			var container = $('[data-brand="' + brand + '"]');
+			container.addClass('on');
+			container.find('.far').attr({class: 'fas fa-check-square'});
+		});
+	}
 }
 
 function BenefitDetail(){

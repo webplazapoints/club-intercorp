@@ -28,6 +28,13 @@ function readLayout() {
 
 }
 
+function goHome(){
+	$('#logo').click(function(){
+		console.log('click logo')
+		location.href = "/views/home.html";
+	})
+}
+
 function icDropdown() {
 	var open = false;
 	// if(window.innerWidth > 600) {
@@ -372,4 +379,21 @@ function submitEnviar(e) {
 		var t = $(e.target);
 		icModal('#modal-contact', 'hide');
 	});
+}
+
+function paramToJson(){
+	var url = location.href.split('?');
+	var object = {};
+	if(url.length > 1) {
+		var qParams = url[1].split('&');
+		qParams.forEach(function(_) {
+			var key = _.split('=')[0];
+			var value = _.split('=')[1];
+
+			object[key] = value;
+		});
+	}
+	
+	return object;
+
 }

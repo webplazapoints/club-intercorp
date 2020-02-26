@@ -82,9 +82,17 @@ Home.prototype.banner = function(){
 }
 
 Home.prototype.destacados = function(){
+
+	var action = sessionStorage.getItem('destacados');
+	if(action != 'hide') { icModal('#modal-destacados', 'show'); }
+	
 	var glide = new Glide('#modal-destacados .glide', {
 		perView: 3,
-		type: 'carousel'
+		type: 'carousel',
+		breakpoints: {
+			900: { perView: 2 },
+			630: { perView: 1 }
+		}
 	}).mount();
 
 	glide.on('run.after', function(){
@@ -93,4 +101,9 @@ Home.prototype.destacados = function(){
 
 		$('.glide__counter').text((index + 1) + ' de ' + total);
 	});
+
+	$('#modal-destacados .close-modal').click(function(){
+		sessionStorage.setItem('destacados', 'hide');
+	});
+
 }

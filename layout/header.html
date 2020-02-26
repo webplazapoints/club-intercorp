@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="navigation">
 		<!-- <i class="burguer-menu fas fa-bars" aria-hidden="true"></i> -->
-		<img id="logo" src="../assets/images/logo-intercorp.jpg" alt="Club Intercorp">
+		<a href="/views/home.html"><img id="logo" src="../assets/images/logo-intercorp.jpg" alt="Club Intercorp"></a>
 		<label class="ic-textfield">
 			<i class="fas fa-search prefix-icon" aria-hidden="true"></i>
 			<span class="placeholder">Buscar beneficios</span>
@@ -17,19 +17,13 @@
 			<li class="benefits">
 				<a href="../views/benefits.html">
 					<i class="fas fa-gift" aria-hidden="true"></i>
-					<span>Beneficios</span>
-				</a>
-			</li>
-			<li class="coupons">
-				<a href="../views/coupons.html">
-					<i class="fas fa-tag" aria-hidden=""></i>
-					<span>Mis cupones</span>
+					<span>Mis beneficios</span>
 				</a>
 			</li>
 			<li class="location">
 				<a href="../views/locations.html">
 					<i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-					<span>Establecimientos</span>
+					<span>Locales</span>
 				</a>
 			</li>
 		</ul>
@@ -37,8 +31,6 @@
 	<div class="social">
 		<ul class="social-media">
 			<li><a href="javascript:void(0)"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-			<li><a href="javascript:void(0)"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-			<li><a href="javascript:void(0)"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
 			<li><a href="javascript:void(0)"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
 		</ul>
 		<i class="fas fa-search mb-icon-search" onclick="showSearcherMobile()" aria-hidden="true"></i>
@@ -108,6 +100,7 @@
 		$(function(){
 			icTextfield();
 			userDropdown();
+			// goHome();
 		});
 	}, 500);
 </script>

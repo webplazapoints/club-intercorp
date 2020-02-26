@@ -10,27 +10,22 @@
 		<aside class="filters">
 			<div class="filter filter-brand">
 				<p>Filtrar por marca</p>
-				<label class="ic-checkbox">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Todas las marcas</span>
-				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-brand="clinica-aviva">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Cl&iacute;nica Aviva</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-brand="promart">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Promart</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-brand="cineplanet">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Cineplanet</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-brand="innova-schools">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Innova Schools</span>
@@ -38,68 +33,45 @@
 			</div>
 			<div class="filter filter-category">
 				<p>Filtrar por categor&iacute;a</p>
-				<label class="ic-checkbox">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Todas las categor&iacute;as</span>
-				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="compras">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Compras</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="educacion">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Educaci&oacute;n</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="restaurantes">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Restaurantes</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="familia">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Familia y Salud</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="entretenimiento">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Entretenimiento</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="tecnologia">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Tecnolog&iacute;a</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="finanzas">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Productos financieros</span>
 				</label>
-				<label class="ic-checkbox">
+				<label class="ic-checkbox" data-category="viajes">
 					<input type="checkbox" hidden>
 					<i class="far fa-square" aria-hidden="true"></i>
 					<span class="label">Viajes</span>
-				</label>
-			</div>
-			<div class="filter filter-type">
-				<p>Filtrar por tipo de canje</p>
-				<label class="ic-checkbox">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Todos los tipos</span>
-				</label>
-				<label class="ic-checkbox">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Env&iacute;o por email</span>
-				</label>
-				<label class="ic-checkbox">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Informativo</span>
 				</label>
 			</div>
 		</aside>
@@ -282,23 +254,6 @@
 					</div>
 				</article>
 			</section>
-			<div class="ic-paginator">
-				<button type="button" data-page="prev" class="disabled">Anterior</button>
-				<select id="cboPaginator" class="ic-paginator-mobile">
-					<option value="1">P&aacute;gina 1</option>
-					<option value="2">P&aacute;gina 2</option>
-					<option value="3">P&aacute;gina 3</option>
-					<option value="4">P&aacute;gina 4</option>
-					<option value="5">P&aacute;gina 5</option>
-				</select>
-				<button type="button" data-page="1" class="active">1</button>
-				<button type="button" data-page="2">2</button>
-				<button type="button" data-page="3">3</button>
-				<button type="button" data-page="4">4</button>
-				<button type="button" data-page="5">5</button>
-				<button type="button" data-page="next">Siguiente</button>
-			</div>
-		</div>
 	</div>
 
 	<div class="ic-modal" id="modal-filter">
