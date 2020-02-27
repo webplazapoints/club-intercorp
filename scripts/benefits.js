@@ -6,6 +6,7 @@ Benefits.prototype.init = function(){
 	activeMenu('.benefits');
 	this.filters();
 	this.setCategories();
+	this.glideBrands();
 }
 
 Benefits.prototype.filters = function(){
@@ -24,6 +25,20 @@ Benefits.prototype.setCategories = function(){
 			container.addClass('on');
 			container.find('.far').attr({class: 'fas fa-check-square'});
 		});
+
+		var title = params.categoria;
+		switch (title) {
+			case 'compras' : title = 'Compras'; break;
+			case 'educacion' : title = 'Educación'; break;
+			case 'restaurantes' : title = 'Restaurantes'; break;
+			case 'familia' : title = 'Familia y Salud'; break;
+			case 'entretenimiento' : title = 'Entretenimiento'; break;
+			case 'tecnologia' : title = 'Tecnología'; break;
+			case 'finanzas' : title = 'Productos financieros'; break;
+			case 'viajes' : title = 'Viajes'; break;
+			default: title = '';
+		}
+		$('.category-title').text(title);
 	}
 
 	if(params.marca) {
@@ -34,6 +49,47 @@ Benefits.prototype.setCategories = function(){
 			container.find('.far').attr({class: 'fas fa-check-square'});
 		});
 	}
+}
+
+Benefits.prototype.glideBrands = function(){
+	var mounted = true;
+	var brandSlider = new Glide('#glide-brands.glide', {
+		perView: 10,
+		peek: {before: 0, after: 70},
+		rewind: false,
+		breakpoints: {
+			1080: {perView: 8},
+			880: {perView: 6},
+			680: {perView: 4},
+			480: {perView: 2}
+		}
+	}).mount();
+
+	var size = $('.glide__slides').width();
+	// mountGlide();
+
+	// $(window).on('resize', function(){
+	// 	mountGlide();
+	// });
+	
+	// function mountGlide(){
+	// 	console.log(window.innerWidth, size);
+	// 	if(window.innerWidth > size) {
+	// 		if(mounted) {
+	// 			console.log(1)
+	// 			brandSlider.destroy();
+	// 			mounted = false;
+	// 		}
+	// 	}
+	// 	else {
+	// 		console.log(2)
+	// 		if(!mounted) {
+	// 			brandSlider.mount();
+	// 			mounted = true;
+	// 		}
+	// 	}
+	// }
+	
 }
 
 function BenefitDetail(){

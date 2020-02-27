@@ -7,77 +7,9 @@
 <main id="benefits-page" class="container">
 	<a class="back" href="javascript:history.back()"><i class="fas fa-arrow-left" aria-hidden="true"></i>Atr&aacute;s</a>
 	<div class="content">
-		<aside class="filters">
-			<div class="filter filter-brand">
-				<p>Filtrar por marca</p>
-				<label class="ic-checkbox" data-brand="clinica-aviva">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Cl&iacute;nica Aviva</span>
-				</label>
-				<label class="ic-checkbox" data-brand="promart">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Promart</span>
-				</label>
-				<label class="ic-checkbox" data-brand="cineplanet">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Cineplanet</span>
-				</label>
-				<label class="ic-checkbox" data-brand="innova-schools">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Innova Schools</span>
-				</label>
-			</div>
-			<div class="filter filter-category">
-				<p>Filtrar por categor&iacute;a</p>
-				<label class="ic-checkbox" data-category="compras">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Compras</span>
-				</label>
-				<label class="ic-checkbox" data-category="educacion">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Educaci&oacute;n</span>
-				</label>
-				<label class="ic-checkbox" data-category="restaurantes">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Restaurantes</span>
-				</label>
-				<label class="ic-checkbox" data-category="familia">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Familia y Salud</span>
-				</label>
-				<label class="ic-checkbox" data-category="entretenimiento">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Entretenimiento</span>
-				</label>
-				<label class="ic-checkbox" data-category="tecnologia">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Tecnolog&iacute;a</span>
-				</label>
-				<label class="ic-checkbox" data-category="finanzas">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Productos financieros</span>
-				</label>
-				<label class="ic-checkbox" data-category="viajes">
-					<input type="checkbox" hidden>
-					<i class="far fa-square" aria-hidden="true"></i>
-					<span class="label">Viajes</span>
-				</label>
-			</div>
-		</aside>
 		<div class="benefit-list">
 			<div class="title">
-				<h1>Todos nuestros beneficios</h1>
+				<h1>Beneficios para <span class="category-title"></span></h1>
 				<div>
 					<div class="ic-dropdown">
 						<i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -90,15 +22,43 @@
 							<li class="ic-dropitem" data-value="1">Nombre A - Z</li>
 							<li class="ic-dropitem" data-value="2">Nombre Z - A</li>
 						</ul>
-						<!-- <select id="" class="ic-dropdown-mobile">
-							<option value="0">Destacados</option>
-							<option value="1">Nombre A - Z</option>
-							<option value="2">Nombre Z - A</option>
-						</select> -->
 					</div>
 					<button type="button" class="ic-secondary-button" id="filter-mb">Filtros</button>
 				</div>
 			</div>
+
+			<section class="brands">
+				<h2>Marcas asociadas a la categor&iacute;a</h2>
+				<!-- <div class="glide" id="glide-brands">
+					<div class="glide__track" data-glide-el="track">
+						<ul class="glide__slides">
+							<li class="glide__slide">0</li>
+							<li class="glide__slide">1</li>
+							<li class="glide__slide">2</li>
+						</ul>
+					</div>
+				</div> -->
+				<div class="glide" id="glide-brands">
+					<div class="glide__track" data-glide-el="track">
+						<ul class="glide__slides list-brands">
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand1.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand2.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand3.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand4.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand5.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand6.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand7.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand8.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand9.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand10.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand11.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand12.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand13.png" alt=""></a></li>
+							<li class="glide__slide brand"><a href="/views/brand.html"><img src="../assets/images/brand14.png" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
 			<section>
 				<article class="benefit">
 					<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
@@ -226,23 +186,6 @@
 						<div>
 							<p class="brand">Bembos</p>
 							<p class="name">10% de descuento</p>
-						</div>
-						<div class="buttons">
-							<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>
-							<ul class="share">
-								<!-- <li><i class="fas fa-share-alt" aria-hidden="true"></i></li> -->
-								<li><i class="fas fa-heart" aria-hidden="true"></i></li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="benefit">
-					<span class="tag-new"><i class="far fa-star" aria-hidden="true"></i>Nuevo</span>
-					<div class="image"><img src="../assets/images/benefit9.png" alt=""></div>
-					<div class="detail">
-						<div>
-							<p class="brand">Financiera Oh!</p>
-							<p class="name">Super beneficios con Tarjeta Oh!</p>
 						</div>
 						<div class="buttons">
 							<a class="ic-primary-button" href="../views/benefit-detail.html">Ver detalles</a>

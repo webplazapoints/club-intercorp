@@ -46,9 +46,20 @@
   top: 50%;
   right: 50%;
 }
-#locations-page .map .place-detail .fas {
+#locations-page .map .place-detail .marker {
+  position: relative;
+}
+#locations-page .map .place-detail .marker .icon-base {
   color: #0039A6;
-  font-size: 38px;
+  font-size: 40px;
+  color: #00DD7E;
+}
+#locations-page .map .place-detail .marker .icon-category {
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 9px);
 }
 #locations-page .map .place-detail .block {
   position: absolute;

@@ -43,9 +43,20 @@
 			position: absolute;
 			top: 50%;
 			right: 50%;
-			.fas {
-				color: $blue;
-				font-size: 38px;
+			.marker {
+				position: relative;
+				.icon-base {
+					color: $blue;
+					font-size: 40px;
+					color: #00DD7E;
+				}
+				.icon-category {
+					font-size: 14px;
+					color: white;
+					position: absolute;
+					top: calc(50% - 20px);
+					left: calc(50% - 9px);
+				}
 			}
 			.block {
 				position: absolute;

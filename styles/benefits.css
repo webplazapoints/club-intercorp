@@ -15,40 +15,6 @@
   color: #0039A6;
   margin-right: 5px;
 }
-#benefits-page .content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-#benefits-page .content .filters {
-  width: 300px;
-  margin-right: 40px;
-}
-#benefits-page .content .filters .filter {
-  border: 1px solid #EAEAEA;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
-  border-radius: 10px;
-  padding: 10px 20px 20px 20px;
-}
-#benefits-page .content .filters .filter:not(:last-child) {
-  margin-bottom: 15px;
-}
-#benefits-page .content .filters .filter > p {
-  font-size: 15px;
-  font-weight: 500;
-  padding: 10px 0;
-  border-bottom: 1px solid #EAEAEA;
-  margin-bottom: 15px;
-}
-#benefits-page .content .filters .filter .ic-checkbox {
-  display: block;
-}
-#benefits-page .content .filters .filter .ic-checkbox:not(:last-child) {
-  margin-bottom: 10px;
-}
-#benefits-page .content .benefit-list {
-  width: calc(100% - 300px);
-}
 #benefits-page .content .benefit-list .title {
   display: flex;
   align-items: center;
@@ -57,6 +23,10 @@
 }
 #benefits-page .content .benefit-list .title h1 {
   font-size: 20px;
+  font-weight: 400;
+}
+#benefits-page .content .benefit-list .title h1 span {
+  font-size: inherit;
   font-weight: bold;
 }
 #benefits-page .content .benefit-list .title .ic-dropdown {
@@ -66,23 +36,55 @@
 #benefits-page .content .benefit-list .title .ic-secondary-button {
   display: none;
 }
-#benefits-page .content .benefit-list section {
+#benefits-page .content .benefit-list .brands h2 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #a9a9a9;
+}
+#benefits-page .content .benefit-list .brands .list-brands {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 30px;
+}
+#benefits-page .content .benefit-list .brands .list-brands li {
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+#benefits-page .content .benefit-list .brands .list-brands li:not(:last-child) {
+  margin-right: 10px;
+}
+#benefits-page .content .benefit-list .brands .list-brands li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+}
+#benefits-page .content .benefit-list .brands .list-brands li a img {
+  width: 100%;
+  max-height: 100%;
+}
+#benefits-page .content .benefit-list section:not(.brands) {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-#benefits-page .content .benefit-list section .benefit {
-  width: calc(100% / 3 - 40px / 3);
+#benefits-page .content .benefit-list section:not(.brands) .benefit {
+  width: calc(100% / 4 - 60px / 4);
   border: 1px solid #EAEAEA;
   border-radius: 10px;
   padding: 20px;
   position: relative;
   margin-bottom: 20px;
 }
-#benefits-page .content .benefit-list section .benefit:not(:nth-child(3n)) {
+#benefits-page .content .benefit-list section:not(.brands) .benefit:not(:nth-child(4n)) {
   margin-right: 20px;
 }
-#benefits-page .content .benefit-list section .benefit .tag-new {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .tag-new {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -93,12 +95,12 @@
   border-radius: 7px;
   z-index: 1;
 }
-#benefits-page .content .benefit-list section .benefit .tag-new .far {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .tag-new .far {
   color: white;
   font-size: 12px;
   margin-right: 3px;
 }
-#benefits-page .content .benefit-list section .benefit .image {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,20 +109,20 @@
   overflow: hidden;
   border-radius: 10px;
 }
-#benefits-page .content .benefit-list section .benefit .image img {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .image img {
   width: 100%;
 }
-#benefits-page .content .benefit-list section .benefit .detail {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail {
   padding-top: 15px;
 }
-#benefits-page .content .benefit-list section .benefit .detail .brand {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .brand {
   font-size: 13px;
   color: #B5B5B5;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#benefits-page .content .benefit-list section .benefit .detail .name {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .name {
   font-size: 15px;
   font-weight: 500;
   margin-top: 3px;
@@ -128,69 +130,81 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .ic-primary-button {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .ic-primary-button {
   padding: 0 30px;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .share {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share {
   display: flex;
   align-items: center;
   list-style: none;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .share li:not(:last-child) {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li:not(:last-child) {
   margin-right: 10px;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .share li i {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li i {
   font-size: 20px;
   color: transparent;
   cursor: pointer;
   transition: 0.2s;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .share li:first-child i {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li:first-child i {
   -webkit-text-stroke: 1px #1A8EAD;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .share li:last-child i {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li:last-child i {
   -webkit-text-stroke: 1px #D82323;
 }
-#benefits-page .content .benefit-list section .benefit .detail .buttons .share li:active i {
+#benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li:active i {
   transform: scale(0.95);
 }
 @media (hover: hover) {
-  #benefits-page .content .benefit-list section .benefit .detail .buttons .share li:first-child:hover i {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li:first-child:hover i {
     color: #1A8EAD;
   }
-  #benefits-page .content .benefit-list section .benefit .detail .buttons .share li:last-child:hover i {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .share li:last-child:hover i {
     color: #D82323;
   }
 }
 @media screen and (max-width: 1100px) {
-  #benefits-page .content .benefit-list section .benefit {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit {
+    width: calc(100% / 3 - 40px / 3);
+    margin-bottom: 20px;
+  }
+  #benefits-page .content .benefit-list section:not(.brands) .benefit:not(:nth-child(3n)) {
+    margin-right: 20px;
+  }
+  #benefits-page .content .benefit-list section:not(.brands) .benefit:nth-child(3n), #benefits-page .content .benefit-list section:not(.brands) .benefit:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit {
     width: calc(100% / 2 - 10px);
     margin-bottom: 20px;
   }
-  #benefits-page .content .benefit-list section .benefit:not(:nth-child(2n)) {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit:not(:nth-child(2n)) {
     margin-right: 20px;
   }
-  #benefits-page .content .benefit-list section .benefit:nth-child(2n), #benefits-page .content .benefit-list section .benefit:last-child {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit:nth-child(2n), #benefits-page .content .benefit-list section:not(.brands) .benefit:last-child {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 540px) {
-  #benefits-page .content .benefit-list section .benefit {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit {
     width: 100%;
     margin-right: 0 !important;
     display: flex;
     align-items: flex-start;
   }
-  #benefits-page .content .benefit-list section .benefit .image {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .image {
     width: 30%;
   }
-  #benefits-page .content .benefit-list section .benefit .detail {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .detail {
     padding-top: 0;
     display: flex;
     flex-direction: column;
@@ -201,27 +215,27 @@
   }
 }
 @media screen and (max-width: 440px) {
-  #benefits-page .content .benefit-list section .benefit {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit {
     padding: 0;
     overflow: hidden;
   }
-  #benefits-page .content .benefit-list section .benefit .image {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .image {
     border-radius: 0;
     height: 100%;
     max-height: none;
     position: relative;
   }
-  #benefits-page .content .benefit-list section .benefit .image img {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .image img {
     height: 100%;
     width: auto;
     position: absolute;
   }
-  #benefits-page .content .benefit-list section .benefit .detail {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .detail {
     padding: 15px;
   }
 }
 @media screen and (max-width: 400px) {
-  #benefits-page .content .benefit-list section .benefit .detail .buttons .ic-primary-button {
+  #benefits-page .content .benefit-list section:not(.brands) .benefit .detail .buttons .ic-primary-button {
     padding: 0 15px;
   }
 }
