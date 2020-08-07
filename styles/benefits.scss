@@ -331,6 +331,15 @@
 					-webkit-text-stroke: 1px #FFB600;
 				}
 			}
+			.dis-fle{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				img{
+					margin-left: 4px;
+					width: 100px;
+				}
+			}
 			.brand {
 				color: $gray;
 				font-weight: 500;

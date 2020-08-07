@@ -347,6 +347,15 @@
   color: transparent;
   -webkit-text-stroke: 1px #FFB600;
 }
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .dis-fle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#benefit-detail-page > div:not(#modal-cupon):not(.information) .content .dis-fle img {
+  margin-left: 4px;
+  width: 100px;
+}
 #benefit-detail-page > div:not(#modal-cupon):not(.information) .content .brand {
   color: #a9a9a9;
   font-weight: 500;

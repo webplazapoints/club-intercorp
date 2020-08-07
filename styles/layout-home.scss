@@ -753,6 +753,23 @@ footer {
 						margin-right: 3px;
 					}
 				}
+				.tag-right{
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					background-color: $blue;
+					color: white;
+					font-size: 12px;
+					padding: 7px;
+					border-radius: 7px;
+					z-index: 1;
+					align-items: center;
+    				display: flex;
+					img{
+						width: 15px;
+						margin-right: 4px;
+					}
+				}
 				.image {
 					display: flex;
 					align-items: center;
